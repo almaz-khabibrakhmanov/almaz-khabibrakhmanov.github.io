@@ -7,7 +7,7 @@ excerpt: 'This paper is about the number 1. The number 2 is left for future work
 date: 2019-06
 venue: 'Diamond and Related Materials'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://almaz-khabibrakhmanov.github.io/files/2019_Nanodiamonds_DRM.pdf'
+paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2019_Nanodiamonds_DRM.pdf'
 #bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
 citation: 'M. Popov, V. Churkin, D. Ovsyannikov, A. Khabibrakhmanov, A. Kirichenko, E. Skryleva, Y. Parkhomenko, M. Kuznetsov, S. Nosukhin, P. Sorokin, S. Terentiev, V. Blank. (2019). &quot;Ultrasmall Diamond Nanoparticles with Unusual Incompressibility.&quot; <i>Diam. Relat. Mater.</i>. 96.'
 ---
