@@ -8,7 +8,9 @@ date: 2021-09-22
 location: "Luxembourg"
 ---
 
-In Fall 2021, I was teaching [Computational Methods course](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Computational_Methods_AY_21_22.pdf) for M.Sc. in Physics (together with Dr. Mario Galante and advised by Prof. Alexandre Tkatchenko). For this course, I was preparing lectures, hands-on tutorials, homework exercises and exam projects. While challenging at first, I enjoyed the experience of sharing my knowledge with students and diligently preparing for it. Below you can find lecture slides (my part of them), as well as the homeworks and exam projects we created for this course.
+In Fall 2021, I was teaching [Computational Methods course](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Computational_Methods_AY_21_22.pdf) for M.Sc. in Physics (together with Dr. Mario Galante and advised by Prof. Alexandre Tkatchenko). For this course, I was preparing lectures, hands-on tutorials, homework exercises and exam projects. While being challenging at first, I enjoyed the experience of sharing my knowledge with students and diligently preparing for it. The invested effort paid back as a positive and encouraging feedback from our students at the end of the semester.
+
+Below you can find my part of lecture slides and hands-on sessions, as well as the exam projects that we created for this course.
 
 Lessons
 ======
@@ -22,5 +24,5 @@ Lessons
 Exams
 ======
 * [Midterm exercises](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Midterm_Exercises.pdf): elastic/inelastic collisions, heat equation, damped harmonic oscillator, projectile motion.
-* [Final projects](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Final_Projects.pdf): hard spheres molecular dynamics, pendulum motion, growth model, Schrödinger scattering on a barrier, 2D Ising model, random walk, shooting method..
+* [Final projects](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Final_Projects.pdf): hard spheres molecular dynamics, pendulum motion, growth model, Schrödinger scattering on a barrier, 2D Ising model, random walk, shooting method.
 
