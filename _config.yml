@@ -24,13 +24,13 @@ repository               : "almaz-khabibrakhmanov/almaz-khabibrakhmanov.github.i
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Dr. Almaz Khabibrakhmanov"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Postdoctoral researcher bridging Quantum Mechanics with (bio)molecular simulations"
+  location         : "Luxembourg"
+  employer         : "University of Luxembourg"
   uri              : # URL
-  email            : "aikhabibrakhmanov [at] gmail [dot] com" 
+  email            : "aikhabibrakhmanov@gmail.com" 
 
   # Academic websites
   academia         : # URL
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "almaz-khabibrakhmanov"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
