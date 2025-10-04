@@ -21,6 +21,6 @@ Lessons
 
 Exams
 ======
-* Midterm exercises: [elastic/inelsatic collisions, heat equation, damped harmonic oscillator, projectile motion.](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Midterm_Exercises.pdf).
-* Final projects: [hard spheres molecular dynamics, pendulum motion, growth model, Schrödinger scattering on a barrier, 2D Ising model, random walk, shooting method.](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Final_Projects.pdf).
+* [Midterm exercises](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Midterm_Exercises.pdf): elastic/inelastic collisions, heat equation, damped harmonic oscillator, projectile motion.
+* [Final projects](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Final_Projects.pdf): hard spheres molecular dynamics, pendulum motion, growth model, Schrödinger scattering on a barrier, 2D Ising model, random walk, shooting method..
 
