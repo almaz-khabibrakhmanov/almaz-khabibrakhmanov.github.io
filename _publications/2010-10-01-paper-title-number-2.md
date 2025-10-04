@@ -1,14 +1,13 @@
 ---
-title: "Paper Title Number 2"
+title: "Carbon at the Nanoscale: Ultrastiffness and Unambiguous Definition of Incompressibility"
 collection: publications
 category: manuscripts
-permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+permalink: /publication/2020-Nanodiamonds-Carbon
+excerpt: 'In this work, I computed bulk modulus of nanodiamonds using classical interatomic potentials. The predicted enhancement of stiffness due to quantum confinement effects is within the experimentally (Raman spectroscopy) measured range.'
+date: 2020-04-30
+venue: 'Carbon'
+#slidesurl: 'https://doi.org/10.1016/j.diamond.2019.04.033'
+paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2020-Nanodiamonds-Carbon.pdf'
+citation: '<b>A. Khabibrakhmanov</b>, P. Sorokin, <a href="https://doi.org/10.1016/j.carbon.2019.12.071">Carbon at the Nanoscale: Ultrastiffness and Unambiguous Definition of Incompressibility</a>, <i>Carbon</i> <b>160</b>, 228-235 (2020).'
 ---
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+In the presented work, the features of mechanical stiffness of carbon nanoparticles (nanodiamonds and fullerenes) in a wide range of sizes are considered. The enhancement of nanodiamonds stiffness (comparing to bulk diamond) is studied and explained in the terms of average bond stiffness $k_0$. It is shown that $k_0$ can be useful in the description of various carbon nanostructures and gives reliable estimates of their incompressibility. Moreover, we found that $k_0$ can be well estimated based only on relaxed atomic geometry.
