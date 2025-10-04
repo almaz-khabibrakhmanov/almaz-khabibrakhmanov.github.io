@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2019-06
+date: 2019-06-01
 venue: 'Diamond and Related Materials'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2019_Nanodiamonds_DRM.pdf'
