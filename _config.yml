@@ -23,7 +23,7 @@ repository               : "almaz-khabibrakhmanov/almaz-khabibrakhmanov.github.i
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "AKhabibrakhmanov.jpg"
+  avatar           : "site_avatar.jpg"
   name             : "Dr. Almaz Khabibrakhmanov"
   pronouns         : # example: "she/her"  
   bio              : "Postdoctoral researcher bridging Quantum Mechanics with (bio)molecular simulations"
