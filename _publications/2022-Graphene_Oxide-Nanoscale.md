@@ -1,8 +1,8 @@
 ---
 title: "Paper Title Number 4"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
+category: manuscripts
+permalink: /publication/2022-Graphene_Oxide-Nanoscale
 excerpt: 'This paper is about fixing template issue #693.'
 date: 2024-02-17
 venue: 'GitHub Journal of Bugs'
