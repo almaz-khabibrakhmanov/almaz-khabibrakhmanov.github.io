@@ -1,13 +1,13 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "Optimized Quantum Drude Oscillators for Atomic and Molecular Response Properties"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: manuscripts
+permalink: /publication/2023-Optimized_QDO-JPCL
+excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
+date: 2023-06-29
+venue: 'The Journal of Physical Chemistry Letters'
+#slidesurl: 'https://doi.org/10.1021/acs.jpclett.3c01221'
+paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2022-Graphene_Oxide-Nanoscale.pdf'
+citation: 'S. Góger, <b>A. Khabibrakhmanov</b>, O. Vaccarelli, D. V. Fedorov, A. Tkatchenko, <a href="https://doi.org/10.1021/acs.jpclett.3c01221">Optimized Quantum Drude Oscillators for Atomic and Molecular Response Properties</a>, <i>J. Phys. Chem. Lett.</i> <b>14</b>, 6217-6223 (2023).'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
+<b>Abstract:</b> The quantum Drude oscillator (QDO) is an efficient yet accurate coarse-grained approach that has been widely used to model electronic and optical response properties of atoms and molecules as well as polarization and dispersion interactions between them. Three effective parameters (frequency, mass, and charge) fully characterize the QDO Hamiltonian and are adjusted to reproduce response properties. However, the soaring success of coupled QDOs for many-atom systems remains fundamentally unexplained, and the optimal mapping between atoms/molecules and oscillators has not been established. Here we present an optimized parametrization (OQDO) where the parameters are fixed by using only dipolar properties. For the periodic table of elements as well as small molecules, our model accurately reproduces atomic (spatial) polarization potentials and multipolar dispersion coefficients, elucidating the high promise of the presented model in the development of next-generation quantum-mechanical force fields for (bio)molecular simulations.
