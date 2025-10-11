@@ -12,7 +12,9 @@ redirect_from:
 Education
 ======
 * Ph.D in Physics, University of Luxembourg, 2025
+  * Thesis: [Bridging Quantum Drude Oscillators and Electronic-Structure Theory for van der Waals Dispersion Interactions](https://tcpunilu.com/pages/assets/img/Theses/AKhabibrakhmanov2025.pdf)  
 * M.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2018
+  * Thesis: [<i>Theoretical Study of Diamond-Like Carbon Nanostructures and Their Mechanical Stiffness</i>](https://almaz-khabibrakhmanov.github.io/files/theses/AKhabibrakhmanov_MSc_Thesis_2020.pdf)
 * B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2014
 
 Professional Experience
