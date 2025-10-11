@@ -22,17 +22,22 @@ Professional Experience
   * Duties includes: 
   * Advisor: Prof. Dr. Alexandre Tkatchenko
  
-* March - June 2022: Visiting Graduate Researcher
+* March - June 2022: <b>Visiting Graduate Researcher</b>
   * Institute for Pure and Applied Mathematics, UCLA, Los Angeles
   * Duties included: 
-  * Advisor: Prof. Dr. Alexandre Tkatchenko
+  * Supervisor: Prof. Dr. Alexandre Tkatchenko
 
-* October 2019 - November 2020: Research Assistant
+* January 2021 - March 2025: <b>Doctoral Researcher</b>
+  * University of Luxembourg
+  * Duties includes: 
+  * Supervisor: Prof. Dr. Alexandre Tkatchenko
+
+* October 2019 - November 2020: <b>Research Assistant</b>
   * National University of Science and Technology "MISiS", Moscow
   * Duties included: 
   * Supervisor: Prof. Dr. Pavel Sorokin
 
-* September 2017 - June 2020: Research Assistant
+* September 2017 - June 2020: <b>Research Assistant</b>
   * Technological Institute for Superhard and Novel Carbon Materials, Moscow
   * Duties included: 
   * Supervisor: Prof. Dr. Pavel Sorokin
