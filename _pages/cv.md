@@ -13,27 +13,22 @@ Professional Experience
 ======
 * March 2025 - present: <b>Postdoctoral Scholar</b>
   * University of Luxembourg
-  * Duties includes: 
   * Advisor: Prof. Dr. Alexandre Tkatchenko
  
 * March - June 2022: <b>Visiting Graduate Researcher</b>
   * Institute for Pure and Applied Mathematics, UCLA, Los Angeles
-  * Duties included: 
   * Supervisor: Prof. Dr. Alexandre Tkatchenko
 
 * January 2021 - March 2025: <b>Doctoral Researcher</b>
   * University of Luxembourg
-  * Duties includes: 
   * Supervisor: Prof. Dr. Alexandre Tkatchenko
 
 * October 2019 - November 2020: <b>Research Assistant</b>
   * National University of Science and Technology "MISiS", Moscow
-  * Duties included: 
   * Supervisor: Prof. Dr. Pavel Sorokin
 
 * September 2017 - June 2020: <b>Research Assistant</b>
   * Technological Institute for Superhard and Novel Carbon Materials, Moscow
-  * Duties included: 
   * Supervisor: Prof. Dr. Pavel Sorokin
 
 Education
@@ -45,14 +40,15 @@ Education
 * B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2014
   * Thesis: [Theoretical Investigation of the Atomic Structure and Mechanical Properties of Novel Dense sp<sup>3</sup>-Carbon Nanostructures](https://almaz-khabibrakhmanov.github.io/files/theses/AKhabibrakhmanov_BSc_Thesis_2018.pdf) (RU)
 
-Skills
+Skills & Software Experience
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* DFT: FHI-aims, VASP, SIESTA
+* Quantum Chemistry: PySCF, Q-Chem, ORCA, MRCC
+* Molecular Dynamics: LAMMPS
+* Visualization & Analysis: OVITO, VESTA, Chimera X, VMD
+* Coding: Python (scripting, automation), Fortran, bash, MatLab, C++
+* High-Performance Computing (MPI/OpenMP, Slurm)
+* Code Development & Modifications: libMBD, FHI-aims, LAMMPS
 
 Publications
 ======
@@ -72,6 +68,6 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Service
 ======
-* Currently signed in to 43 different slack teams
+* Reviewer for <i>The Journal of Chemical Physics</i> and <i>Journal of Chemical Theory and Computation</i> since 2023.
