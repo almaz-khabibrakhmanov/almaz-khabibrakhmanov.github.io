@@ -11,26 +11,36 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Physics, University of Luxembourg, 2025
+* M.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2018
+* B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2014
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* March 2025 - present: Postdoctoral Scholar
+  * University of Luxembourg
+  * Duties includes: 
+  * Advisor: Prof. Dr. Alexandre Tkatchenko
+ 
+* March - June 2022: Visiting Graduate Researcher
+  * Institute for Pure and Applied Mathematics, UCLA, Los Angeles
+  * Duties included: 
+  * Advisor: Prof. Dr. Alexandre Tkatchenko
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Fall 2021, Spring 2023: Teaching Assistant
+  * University of Luxembourg
+  * Duties included: 
+  * Advisor: Prof. Dr. Alexandre Tkatchenko
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* October 2019 - November 2020: Research Assistant
+  * National University of Science and Technology "MISiS", Moscow
+  * Duties included: 
+  * Supervisor: Prof. Dr. Pavel Sorokin
+
+* September 2017 - June 2020: Research Assistant
+  * Technological Institute for Superhard and Novel Carbon Materials, Moscow
+  * Duties included: 
+  * Supervisor: Prof. Dr. Pavel Sorokin
   
 Skills
 ======
