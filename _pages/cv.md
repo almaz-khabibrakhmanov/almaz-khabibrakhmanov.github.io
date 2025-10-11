@@ -15,20 +15,15 @@ Education
 * M.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2018
 * B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2014
 
-Work experience
+Professional Experience
 ======
-* March 2025 - present: Postdoctoral Scholar
+* March 2025 - present: <b>Postdoctoral Scholar</b>
   * University of Luxembourg
   * Duties includes: 
   * Advisor: Prof. Dr. Alexandre Tkatchenko
  
 * March - June 2022: Visiting Graduate Researcher
   * Institute for Pure and Applied Mathematics, UCLA, Los Angeles
-  * Duties included: 
-  * Advisor: Prof. Dr. Alexandre Tkatchenko
-
-* Fall 2021, Spring 2023: Teaching Assistant
-  * University of Luxembourg
   * Duties included: 
   * Advisor: Prof. Dr. Alexandre Tkatchenko
 
