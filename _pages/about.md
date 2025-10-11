@@ -17,6 +17,9 @@ I thrive at the intersection of fundamental science and computational innovation
 
 Outside of research, I am a passionate guitarist and a football player. I also enjoy running, hiking, and reading. If you're into heavy music, we might find even more common ground to talk about.
 
+<h2>Talk map</h2>
+<iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>
+
 Latest News
 ======
 **10/2025** - The website is set up! From now on, I will post regular updates on my scientific life & events here.
