@@ -22,4 +22,5 @@ Outside of research, I am a passionate guitarist and a football player. I also e
 
 Latest News
 ======
-**10/2025** - The website is set up! From now on, I will post regular updates on my scientific life & events here.
+**09-10-2025** - Our paper <i>Noncovalent Interactions in DFT: All the Charge Density We Do Not See</i> has been accepted to <i>JACS</i>!
+**01-10-2025** - The website is set up! From now on, I will post regular updates on my scientific life & events here.
