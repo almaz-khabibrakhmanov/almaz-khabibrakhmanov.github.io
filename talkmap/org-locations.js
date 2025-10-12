@@ -1,22 +1,42 @@
 var addressPoints = [
   [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
+    "<q>The van der Waals \u2013 London Discussions</q><br />University of Strasbourg; Strasbourg, France",
+    48.584614,
+    7.7507127
   ],
   [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
+    "2024 DPG Spring Meeting (Condensed Matter Section)<br />TU Berlin; Berlin, Germany",
+    52.5173885,
+    13.3951309
   ],
   [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
+    "2<sup>nd</sup> Reunion Meeting of the IPAM Long Program<br />UCLA Conference Center; Lake Arrowhead, CA, USA",
+    34.2571781,
+    -117.1909059
+  ],
+  [
+    "<q>Intermolecular Interactions and Properties of Gases, Liquids and Solids</q> (Satellite Meeting of ICQC 2023)<br />University of Graz; Graz, Austria",
+    47.0708678,
+    15.4382786
+  ],
+  [
+    "<q>Electronic Structure Theory and Machine Learning in Materials Science and Computational Chemistry</q>, 2023<br />Hullu Poro Hotel; Levi, Finland",
+    67.7844055,
+    24.8557289
+  ],
+  [
+    "Joint Seminar in the Groups of Prof. Guilia Galli and Prof. Laura Gagliardi<br />University of Chicago; Chicago, IL, USA",
+    41.8755616,
+    -87.6244212
+  ],
+  [
+    "2022 APS March Meeting<br />McCormick Center; Chicago, IL, USA",
+    41.8755616,
+    -87.6244212
+  ],
+  [
+    "IPAM Long Program <q>Advancing Quantum Mechanics with Mathematics and Statistics</q>, 2022<br />Institute for Pure and Applied Mathematics (IPAM), UCLA; Los Angeles, CA, USA",
     34.0536909,
     -118.242766
-  ],
-  [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
   ]
 ];
