@@ -1,1 +1,1 @@
-
+In September 2023, I made a [tutorial](https://github.com/almaz-khabibrakhmanov/HF_tutorial) on the Hartree-Fock method. That was for MSc and PhD students of our group within the weekly PhD Journal Club series.
