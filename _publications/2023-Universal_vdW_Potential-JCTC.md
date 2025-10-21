@@ -3,7 +3,7 @@ title: "Universal Pairwise Interatomic van der Waals Potentials Based on Quantum
 collection: publications
 category: manuscripts
 permalink: /publication/2023-Universal_vdW_Potential-JCTC
-excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
+#excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
 date: 2023-10-24
 venue: 'Journal of Chemical Theory and Computation'
 #slidesurl: 'https://doi.org/10.1021/acs.jctc.3c00797'
