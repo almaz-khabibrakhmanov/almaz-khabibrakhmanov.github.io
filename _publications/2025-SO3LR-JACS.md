@@ -3,7 +3,7 @@ title: "Molecular Simulations with a Pretrained Neural Network and Universal Pai
 collection: publications
 category: manuscripts
 permalink: /publication/2025-SO3LR-JACS
-excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
+#excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
 date: 2025-08-31
 venue: 'The Journal of the American Chemical Society'
 #slidesurl: 'https://doi.org/10.1021/jacs.5c09558'
