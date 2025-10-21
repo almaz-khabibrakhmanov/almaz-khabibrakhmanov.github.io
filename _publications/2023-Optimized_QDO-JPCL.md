@@ -3,7 +3,7 @@ title: "Optimized Quantum Drude Oscillators for Atomic and Molecular Response Pr
 collection: publications
 category: manuscripts
 permalink: /publication/2023-Optimized_QDO-JPCL
-excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
+#excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
 date: 2023-06-29
 venue: 'The Journal of Physical Chemistry Letters'
 #slidesurl: ''
