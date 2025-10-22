@@ -20,7 +20,7 @@ redirect_from:
   </div>
   
   <div style="flex: 1; padding-left: 2em; min-width: 200px;">
-    <h3>Latest News</h3>
+    <h2>Latest News</h2>
     <ul>
       <li><strong>15 Oct 2025:</strong> I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.</li>
       <li><strong>9 Oct 2025:</strong> Our paper <i>Noncovalent Interactions in DFT: All the Charge Density We Do Not See</i> has been accepted to <i>JACS</i>!</li>
