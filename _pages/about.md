@@ -18,20 +18,13 @@ redirect_from:
     <h2>Talk map</h2>
     <iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>
   </div>
+  
   <div style="flex: 1; padding-left: 2em;">
     <h3>Latest News</h3>
     <ul>
-      <li><strong>15 Oct 2025:</strong> - I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.</li>
+      <li><strong>15 Oct 2025:</strong> I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.</li>
       <li><strong>9 Oct 2025:</strong> Our paper <i>Noncovalent Interactions in DFT: All the Charge Density We Do Not See</i> has been accepted to <i>JACS</i>!</li>
+      <li><strong>1 Oct 2025:</strong> The website is set up! From now on, I will post regular updates on my scientific life & events here.</li>
     </ul>
   </div>
 </div>
-
-
-Latest News
-======
-**15-10-2025** - I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.
-
-**09-10-2025** - Our paper <i>Noncovalent Interactions in DFT: All the Charge Density We Do Not See</i> has been accepted to <i>JACS</i>!
-
-**01-10-2025** - The website is set up! From now on, I will post regular updates on my scientific life & events here.
