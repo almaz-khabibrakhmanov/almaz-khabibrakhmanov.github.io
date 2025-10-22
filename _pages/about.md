@@ -19,7 +19,7 @@ redirect_from:
     <iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>
   </div>
   
-  <div style="flex: 1; padding-left: 2em;">
+  <div style="flex: 1; padding-left: 2em; min-width: 200px;">
     <h3>Latest News</h3>
     <ul>
       <li><strong>15 Oct 2025:</strong> I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.</li>
