@@ -19,11 +19,3 @@ Outside of research, I am a passionate guitarist and a football player. I also e
 
 <h2>Talk map</h2>
 <iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>
-
-Latest News
-======
-**15-10-2025** - I am excited to share that our review <i>Accurate Noncovalent Interactions in Atomistic Systems via Quantum Drude Oscillators</i> has been just [published](https://doi.org/10.1063/5.0281913) in <i>JCP</i>! That was a great community-wide effort and an enjoyable collaboration with 10+ co-authors.
-
-**09-10-2025** - Our paper <i>Noncovalent Interactions in DFT: All the Charge Density We Do Not See</i> has been accepted to <i>JACS</i>!
-
-**01-10-2025** - The website is set up! From now on, I will post regular updates on my scientific life & events here.
