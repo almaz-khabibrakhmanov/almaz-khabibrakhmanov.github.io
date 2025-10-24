@@ -244,6 +244,12 @@
   }
 }
 
+.archive__item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .archive__item-right {
   float: right;
   max-width: 200px;
