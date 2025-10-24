@@ -21,7 +21,7 @@
         {% if post.toc_image contains "://" %}
           "{{ post.toc_image }}"
         {% else %}
-          "{{ post.toc_image | prepend: "/images/" | prepend: base_path }}"
+          "{{ post.toc_image | prepend: "/files/papers/toc_figures/" | prepend: base_path }}"
         {% endif %}
         alt="ToC image for {{ title }}">
     </div>
