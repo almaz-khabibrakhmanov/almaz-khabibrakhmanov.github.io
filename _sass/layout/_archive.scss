@@ -243,3 +243,40 @@
     }
   }
 }
+
+.archive__item--with-toc {
+  @include breakpoint($large) {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+.archive__item-toc {
+  @include breakpoint($large) {
+    order: 2;
+    text-align: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  }
+  
+  @include breakpoint($medium) {
+    margin-top: 1rem;
+    
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+.archive__item-content {
+  @include breakpoint($large) {
+    order: 1;
+  }
+}
