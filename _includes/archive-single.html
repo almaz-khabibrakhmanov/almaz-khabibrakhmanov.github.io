@@ -52,20 +52,6 @@
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-
-    {% if post.collection == 'publications' and post.toc_image %}
-      {% if include.type == "list" %}
-        <!-- Archive page: float TOC right -->
-        <div class="publication-toc-right">
-          <img src="{{ post.toc_image | prepend: '/files/papers/toc_figures/' | prepend: base_path }}" alt="TOC Image">
-        </div>
-      {% else %}
-        <!-- Single publication page: show below abstract -->
-        <div class="publication-toc-single">
-          <img src="{{ post.toc_image | prepend: '/files/papers/toc_figures/' | prepend: base_path }}" alt="TOC Image">
-        </div>
-      {% endif %}
-    {% endif %}
     
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
