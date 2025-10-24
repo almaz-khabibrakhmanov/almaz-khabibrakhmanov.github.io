@@ -244,12 +244,6 @@
   }
 }
 
-.archive__item-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
 .archive__item-right {
   float: right;
   max-width: 200px;
@@ -275,5 +269,5 @@
 }
 
 .archive__item-main {
-  flex: 1 1 0;
+  overflow: hidden; // ensures floated sidebar does not push content down
 }
