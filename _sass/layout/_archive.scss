@@ -243,31 +243,3 @@
     }
   }
 }
-
-.archive__item-right {
-  float: right;
-  max-width: 200px;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 2px;
-  background-color: var(--global-bg-color);
-  overflow-y: auto; // optional for tall TOCs
-
-  img {
-    width: 100%;
-    display: block;
-  }
-
-  @include breakpoint($small) {
-    float: none;
-    display: block;
-    max-width: 80%;
-    margin: 1rem auto;
-  }
-}
-
-.archive__item-main {
-  overflow: hidden; // ensures floated sidebar does not push content down
-}
