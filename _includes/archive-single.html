@@ -46,6 +46,21 @@
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
 
+    {% comment %}
+      Show the TOC image floating on archive page, or below abstract on single page
+    {% endcomment %}
+    {% if post.collection == 'publications' and post.toc_image %}
+      {% if include.type == "list" %}
+        <div class="publication-toc" style="float:right; max-width:200px; margin-left:1rem; margin-bottom:1rem;">
+          <img src="{{ post.toc_image | prepend: '/images/' | prepend: base_path }}" alt="TOC Image" style="width:100%; border:1px solid #ccc; border-radius:4px; padding:2px;">
+        </div>
+      {% else %}
+        <div class="publication-toc-single">
+          <img src="{{ post.toc_image | prepend: '/images/' | prepend: base_path }}" alt="TOC Image" style="width:100%; margin-top:1rem; border:1px solid #ccc; border-radius:4px; padding:2px;">
+        </div>
+      {% endif %}
+    {% endif %}
+    
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
