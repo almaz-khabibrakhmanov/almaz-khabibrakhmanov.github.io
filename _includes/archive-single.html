@@ -12,8 +12,15 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="{{ include.type | default: "list" }}__item archive__item-wrapper" style="display:flex; flex-wrap:wrap; gap:1rem;">
+
+  {% if post.collection == 'publications' and post.toc_image %}
+    <div class="archive__item-right">
+      <img src="{{ post.toc_image | prepend: '/files/papers/toc_figures/' | prepend: base_path }}" alt="TOC Image">
+    </div>
+  {% endif %}
+
+  <article class="archive__item-main" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
