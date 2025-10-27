@@ -7,7 +7,8 @@ permalink: /publication/2025-MBD_Densities-JACS
 date: 2025-10-23
 venue: 'The Journal of the American Chemical Society'
 #slidesurl: 'https://doi.org/10.1021/jacs.5c09558'
-#paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-QDO_Review-JCP.pdf'citation: '<b>A. Khabibrakhmanov</b>, M. Gori, C. Müller, A. Tkatchenko, <a href="https://doi.org/10.1021/jacs.5c13706">Noncovalent Interactions in Density Functional Theory: All the Charge Density We Do Not See</a>, <i>J. Am. Chem. Soc.</i> <b>xx</b>, xxx-xxx (2025).'
+#paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-QDO_Review-JCP.pdf'
+citation: '<b>A. Khabibrakhmanov</b>, M. Gori, C. Müller, A. Tkatchenko, <a href="https://doi.org/10.1021/jacs.5c13706">Noncovalent Interactions in Density Functional Theory: All the Charge Density We Do Not See</a>, <i>J. Am. Chem. Soc.</i> <b>xx</b>, xxx-xxx (2025).'
 ---
 <b>Abstract:</b> Exact determination of the electronic density of molecules and materials would provide direct access to accurate bonded and nonbonded interatomic 
 interactions via the Hellman–Feynman theorem. However, density-functional approximations (DFAs) ─ the workhorse methods for the electronic structure of atomistic 
