@@ -50,14 +50,6 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.toc_image %}
-          <div class="publication-toc">
-            <img 
-              src="{{ '/files/papers/toc_figures/' | prepend: site.baseurl | append: page.toc_image }}" 
-              alt="TOC figure for {{ page.title }}">
-          </div>
-        {% endif %}
-
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
@@ -86,6 +78,14 @@ layout: default
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
+
+      {% if page.toc_image %}
+          <div class="publication-toc">
+            <img 
+              src="{{ '/files/papers/toc_figures/' | prepend: site.baseurl | append: page.toc_image }}" 
+              alt="TOC figure for {{ page.title }}">
+          </div>
+        {% endif %}
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
