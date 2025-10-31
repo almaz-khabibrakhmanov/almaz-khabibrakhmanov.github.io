@@ -52,7 +52,9 @@ layout: default
 
         {% if page.toc_image %}
           <div class="publication-toc">
-            <img src="{{ page.toc_image }}" alt="TOC figure for {{ page.title }}">
+            <img 
+              src="{{ '/files/papers/toc_figures/' | prepend: site.baseurl | append: page.toc_image }}" 
+              alt="TOC figure for {{ page.title }}">
           </div>
         {% endif %}
 
