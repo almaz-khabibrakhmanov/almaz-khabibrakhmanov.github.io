@@ -50,6 +50,12 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
+        {% if page.toc_image %}
+          <div class="publication-toc">
+            <img src="{{ page.toc_image }}" alt="TOC figure for {{ page.title }}">
+          </div>
+        {% endif %}
+
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
