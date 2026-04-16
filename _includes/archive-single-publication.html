@@ -1,0 +1,95 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign has_paper_link = false %}
+{% if post.paperurl and post.paperurl != '' %}{% assign has_paper_link = true %}{% endif %}
+{% assign has_pdf = false %}
+{% if post.pdfurl and post.pdfurl != '' %}{% assign has_pdf = true %}{% endif %}
+{% assign has_sm = false %}
+{% if post.supplementary and post.supplementary != '' %}{% assign has_sm = true %}{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item archive__item--publication" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="archive__item-body">
+      {% if include.type == "grid" and teaser %}
+        <div class="archive__item-teaser">
+          <img src=
+            {% if teaser contains "://" %}
+              "{{ teaser }}"
+            {% else %}
+              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="">
+        </div>
+      {% endif %}
+
+      <h2 class="archive__item-title" itemprop="headline">
+        {% if include.item_number %}<span class="pub-number">{{ include.item_number }}.</span>{% endif -%}
+        {%- if has_paper_link %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ title }}</a>
+        {%- elsif post.link %}<a href="{{ post.link }}" target="_blank" rel="noopener">{{ title }}</a>
+        {%- else %}{{ title }}
+        {%- endif %}
+      </h2>
+
+      {% if post.read_time %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+
+      {% if post.collection == 'teaching' %}
+        <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.collection == 'publications' %}
+        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.date %}
+        <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+
+      {% if post.excerpt and site.read_more != 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+      {% elsif post.excerpt and site.read_more == 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p></p>
+      {% endif %}
+
+      {% if post.citation %}
+      <p class="archive__item-citation-text"><i>Citation:</i> {{ post.citation }}</p>
+      {% endif %}
+
+    </div><!-- /.archive__item-body -->
+
+    {% if (post.toc_image and post.toc_image != '') or has_pdf or has_sm %}
+      <div class="archive__item-toc">
+        {% if has_pdf or has_sm %}
+          <div class="archive__item-citation-buttons">
+            {% if has_pdf %}
+              <a href="{{ post.pdfurl }}" class="pub-btn" target="_blank" rel="noopener">PDF</a>
+            {% endif %}
+            {% if has_sm %}
+              <a href="{{ post.supplementary }}" class="pub-btn" target="_blank" rel="noopener">SM</a>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if post.toc_image and post.toc_image != '' %}
+          {% assign toc_src = '/files/papers/toc_figures/' | append: post.toc_image | prepend: base_path %}
+          <div class="toc-image-wrapper">
+            <img src="{{ toc_src }}" alt="TOC figure for {{ post.title }}" class="toc-thumb"
+                 onclick="this.closest('.archive__item-toc').querySelector('.toc-modal').showModal()">
+            <dialog class="toc-modal" onclick="this.close()">
+              <img src="{{ toc_src }}" alt="TOC figure for {{ post.title }} (enlarged)">
+            </dialog>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </article>
+</div>

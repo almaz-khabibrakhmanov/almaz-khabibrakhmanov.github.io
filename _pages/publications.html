@@ -6,29 +6,31 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find all articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
+  {% for category in site.publication_category %}
+    {% assign cat_posts = site.publications | where: "category", category[0] %}
+    {% assign cat_total = cat_posts | size %}
+    {% if cat_total == 0 %}{% continue %}{% endif %}
+    {% assign cat_counter = cat_total %}
+    <h2>{{ category[1].title }}</h2><hr />
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+      {% if post.category != category[0] %}{% continue %}{% endif %}
+      {% include archive-single-publication.html item_number=cat_counter %}
+      {% assign cat_counter = cat_counter | minus: 1 %}
     {% endfor %}
   {% endfor %}
 {% else %}
+  {% assign total_pubs = site.publications | size %}
+  {% assign item_num = total_pubs %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    {% include archive-single-publication.html item_number=item_num %}
+    {% assign item_num = item_num | minus: 1 %}
   {% endfor %}
 {% endif %}
 

@@ -3,13 +3,14 @@ title: "Noncovalent Interactions in Density Functional Theory: All the Charge De
 collection: publications
 category: manuscripts
 permalink: /publication/2025-MBD_Densities-JACS
-#excerpt: 'The DFT study of graphene oxide (GO) patterned by pristine graphene nanoroads, where I explored how various GO compositions and nanoroads width and orientations affect electronic properties of this nanostructured material. Similar to fluorinated graphene, the band gap exhibits oscillatory decrease with broadening nanoroads. The emerging edge magnetism suggests possible applications of patterned GO in optoelectronics and spintronics.'
+excerpt: 'This is a systematic study of dispersion-induced density polarization ─ an effect that has been largely overlooked in density-functional theory. Through extensive benchmarking across more than 30 molecular and supramolecular systems, the work demonstrates that dispersion interactions can significantly polarize electronic densities and alter long-range electrostatic potentials by up to 4 kcal/mol. These findings reveal a non-trivial coupling between dispersion and electrostatic interactions, with important implications for both electronic-structure methods and molecular modeling. In addition, this study required the development of robust computational protocols for generating high-level reference data, including carefully converged CCSD─HF density differences. The data is published and fully available online (see "Datasets" below).'
 date: 2025-10-23
 venue: 'The Journal of the American Chemical Society'
-#slidesurl: 'https://doi.org/10.1021/jacs.5c09558'
-#paperurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-QDO_Review-JCP.pdf'
-citation: '<b>A. Khabibrakhmanov</b>, M. Gori, C. Müller, A. Tkatchenko, <a href="https://doi.org/10.1021/jacs.5c13706">Noncovalent Interactions in Density Functional Theory: All the Charge Density We Do Not See</a>, <i>J. Am. Chem. Soc.</i> <b>xx</b>, xxx-xxx (2025).'
+paperurl: 'https://doi.org/10.1021/jacs.5c13706'
+pdfurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-MBD_Densities-JACS.pdf'
+citation: '<b>A. Khabibrakhmanov</b>, M. Gori, C. Müller, A. Tkatchenko, <a href="https://doi.org/10.1021/jacs.5c13706">Noncovalent Interactions in Density Functional Theory: All the Charge Density We Do Not See</a>, <i>J. Am. Chem. Soc.</i> <b>147</b>(44), 40763–40775 (2025).'
 toc_image: '2025-MBD_Densities-JACS.png'
+supplementary: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-MBD_Densities-SM-JACS.pdf'
 ---
 <b>Abstract:</b> Exact determination of the electronic density of molecules and materials would provide direct access to accurate bonded and nonbonded interatomic 
 interactions via the Hellman–Feynman theorem. However, density-functional approximations (DFAs) ─ the workhorse methods for the electronic structure of atomistic 

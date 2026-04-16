@@ -27,6 +27,16 @@
   }
 }
 
+// Reduce spacing around publication section headings ("Journal Articles" etc.)
+// .archive > h2 targets only the direct-child section h2, not archive__item-title h2s inside articles
+.archive > h2 {
+  margin-bottom: 0.6em;
+}
+.archive h2 + hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .archive__subtitle {
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
@@ -52,7 +62,7 @@
 .page__content {
 
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: 0em;
     border-bottom: none;
   }
 }
@@ -104,6 +114,163 @@
 
   .page__meta {
     margin: 0 0 4px;
+  }
+
+  // Two-column flex layout: text body + TOC image (publications only)
+  .archive__item--publication {
+    display: flex;
+    align-items: flex-start;  // top-align both columns so buttons sit level with the title
+    gap: 1.2em;
+  }
+
+  // Reduce browser-default h2 top margin on article titles (was ~0.83em; contributes to
+  // space after section header AND at the top of each item within the flex container)
+  .archive__item--publication .archive__item-title {
+    margin-top: 0.6em;
+  }
+
+  .archive__item-body {
+    flex: 1 1 0;
+    min-width: 0; // prevent long titles from overflowing
+
+    // Last paragraph's margin-bottom gets "trapped" as dead space at the bottom of the
+    // flex item, making .list__item taller and adding invisible gap before the next item
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .archive__item-toc {
+    flex: 0 0 clamp(120px, 45%, 260px);  // TOC column: 45% of row, min 120px, max 260px
+    align-self: stretch;                  // stretch to full row height so image can center vertically
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toc-image-wrapper {
+    flex: 1;           // fills all remaining height in the toc column after buttons
+    display: flex;
+    align-items: center; // vertically centers the image in that remaining space (~excerpt level)
+    width: 100%;
+
+    img.toc-thumb {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      border: 1px solid var(--global-border-color);
+      border-radius: $border-radius;
+      transition: opacity 0.15s ease;
+
+      &:hover {
+        opacity: 0.82;
+      }
+    }
+  }
+
+  // Stack columns on narrow screens
+  @media (max-width: #{$medium}) {
+    .archive__item--publication {
+      flex-direction: column;
+    }
+
+    .archive__item-toc {
+      flex: 0 0 auto;
+      width: clamp(120px, 60%, 200px);  // mobile: slightly wider relative share
+      align-self: center;
+    }
+  }
+}
+
+// Explicit gap between consecutive list items (replaces the unpredictable browser-default
+// paragraph margin-bottom that was previously creating dead space between items)
+.list__item + .list__item {
+  margin-top: 1em;
+}
+
+
+/*
+   Citation text and PDF / SM buttons
+   ========================================================================== */
+
+.archive__item-citation-text {
+  margin-top: 0.25em;
+  font-size: $type-size-6;
+}
+
+// Buttons rendered inside .archive__item-toc, above the TOC image
+.archive__item-citation-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1em;    // align with h2 title (h2 margin-top: 1em × $type-size-4 = 1.25× body units)
+  margin-bottom: 0.6em;  // space between buttons and TOC image below
+  width: 100%;
+}
+
+a.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7.8em;       // 2× the previous 3.9em
+  padding: 0.72em 1.66em; // 2× the previous 0.36em / 0.83em
+  border: 1.5px solid var(--global-link-color);
+  border-radius: $border-radius;
+  font-size: $type-size-6; // 
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--global-link-color);
+  background: transparent;
+  text-decoration: none !important;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+
+  &:visited {
+    color: var(--global-link-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--global-bg-color);
+    background-color: var(--global-link-color);
+    text-decoration: none !important;
+  }
+}
+
+.pub-number {
+  display: inline-block; // own text-decoration context: parent hover underline cannot bleed in
+  color: var(--global-text-color-light);
+  font-weight: normal;
+  margin-right: 0.15em;
+  text-decoration: none !important;
+}
+
+
+/*
+   TOC image lightbox (native <dialog>)
+   ========================================================================== */
+
+dialog.toc-modal {
+  padding: 0;
+  border: none;
+  border-radius: $border-radius;
+  background: transparent;
+  max-width: 90vw;
+  max-height: 90vh;
+
+  img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
   }
 }
 
