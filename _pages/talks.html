@@ -31,8 +31,15 @@ author_profile: true
 {% endfor %}
 
 <script>
-// Open the lightbox at the clicked thumbnail. The full photo list lives in the
-// gallery's .gallery__track; the modal pages through it via the nav buttons.
+/*
+  IMPORTANT: use block comments only in this inline script, never // line
+  comments. The production build minifies the page onto a single line, which
+  would turn any // comment into one that swallows the rest of the script and
+  leaves these functions undefined (clicks then do nothing on the live site).
+
+  Open the lightbox at the clicked thumbnail. The full photo list lives in the
+  gallery's .gallery__track; the modal pages through it via the nav buttons.
+*/
 function galleryOpen(img) {
   var gallery = img.closest('.archive__item-gallery');
   var modal = gallery.querySelector('.gallery-modal');
@@ -42,21 +49,21 @@ function galleryOpen(img) {
   galleryRender(modal);
   modal.showModal();
 }
-// Advance the lightbox by dir (-1 / +1), wrapping around.
+/* Advance the lightbox by dir (-1 / +1), wrapping around. */
 function galleryModalNav(btn, dir) {
   var modal = btn.closest('.gallery-modal');
   var n = modal._imgs.length;
   modal._idx = (modal._idx + dir + n) % n;
   galleryRender(modal);
 }
-// Paint the current photo + caption + counter; hide nav buttons when there is
-// only one photo.
+/* Paint the current photo + caption + counter; hide nav buttons when there is
+   only one photo. */
 function galleryRender(modal) {
   var img = modal._imgs[modal._idx];
-  // A thumbnail may carry a higher-res source in data-full; prefer it in the lightbox.
+  /* A thumbnail may carry a higher-res source in data-full; prefer it in the lightbox. */
   modal.querySelector('.gallery-modal__img').src = img.getAttribute('data-full') || img.src;
   modal.querySelector('.gallery-modal__caption').textContent = img.alt;
-  // Counter "n/N" (1-based current index over the album total).
+  /* Counter "n/N" (1-based current index over the album total). */
   modal.querySelector('.gallery-modal__counter').textContent =
     (modal._idx + 1) + '/' + modal._imgs.length;
   var single = modal._imgs.length < 2;
