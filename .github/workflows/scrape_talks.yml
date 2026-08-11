@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # allow github-actions[bot] to push the regenerated talk map back
 
     steps:
     - uses: actions/checkout@v4
