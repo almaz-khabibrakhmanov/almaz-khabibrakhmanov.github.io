@@ -8,7 +8,7 @@ date: 2019-06-01
 venue: 'Diamond and Related Materials'
 paperurl: 'https://doi.org/10.1016/j.diamond.2019.04.033'
 pdfurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2019-Nanodiamonds-DRM.pdf'
-citation: 'M. Popov, V. Churkin, D. Ovsyannikov, <b>A. Khabibrakhmanov</b>, A. Kirichenko, E. Skryleva, Y. Parkhomenko, M.&nbspKuznetsov, S. Nosukhin, P. Sorokin, S. Terentiev, V. Blank, <a href="https://doi.org/10.1016/j.diamond.2019.04.033">Ultrasmall Diamond Nanoparticles with Unusual Incompressibility</a>, <i>Diam. Relat. Mater.</i> <b>96</b>, 52–57 (2019).'
+citation: 'M. Popov, V. Churkin, D. Ovsyannikov, <b>A. Khabibrakhmanov</b>, A. Kirichenko, E. Skryleva, Y. Parkhomenko, M.&nbsp;Kuznetsov, S. Nosukhin, P. Sorokin, S. Terentiev, V. Blank, <a href="https://doi.org/10.1016/j.diamond.2019.04.033">Ultrasmall Diamond Nanoparticles with Unusual Incompressibility</a>, <i>Diam. Relat. Mater.</i> <b>96</b>, 52–57 (2019).'
 toc_image: '2019-Nanodiamonds-DRM.jpg'
 supplementary:
 ---

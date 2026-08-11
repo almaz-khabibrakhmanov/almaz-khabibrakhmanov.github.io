@@ -1,39 +1,66 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
-      {{ title }}
-    </h2>
+<div class="list__item">
+  <article class="archive__item archive__item--talk" itemscope itemtype="http://schema.org/Event">
 
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+    <div class="archive__item-body">
+      <h2 class="archive__item-title" itemprop="name">
+        {% if include.item_number %}<span class="pub-number">{{ include.item_number }}.</span>{% endif -%}
+        {%- if post.conference_url %}<a href="{{ post.conference_url }}" target="_blank" rel="noopener">{{ title }}</a>{%- else %}{{ title }}{%- endif %}
+      </h2>
+      <p class="archive__item-excerpt archive__item-meta"><strong>{{ post.type }}</strong>&ensp;<i class="fas fa-fw fa-building-columns" aria-hidden="true"></i>&ensp;{{ post.venue }}&ensp;<i class="fas fa-fw fa-location-dot" aria-hidden="true"></i>&ensp;{{ post.location }}&ensp;<i class="fas fa-fw fa-calendar" aria-hidden="true"></i>&ensp;{% if post.date_display %}{{ post.date_display }}{% else %}{{ post.date | date: '%B %Y' }}{% endif %}</p>
+      {% if post.content and post.content != '' %}
+        <div class="archive__item-description">{{ post.content | markdownify }}</div>
+      {% endif %}
+    </div>
+
+    <div class="archive__item-gallery">
+      {% if post.photos and post.photos != empty %}
+        {% comment %}
+          Photos present → clickable thumbnail + lightbox. Only the first photo is
+          shown as the thumbnail (no nav buttons); the rest stay in the track
+          (hidden via CSS) so the lightbox can page through them. Prefer an
+          explicit `thumb:` image for the first slot when provided.
+        {% endcomment %}
+        <div class="gallery__track">
+          {% for photo in post.photos %}
+            {% assign photo_src = '/files/talks/photos/' | append: photo.file | prepend: base_path %}
+            {% if forloop.first and post.thumb %}
+              {% assign thumb_src = '/files/talks/thumbnails/' | append: post.thumb | prepend: base_path %}
+              <img src="{{ thumb_src }}" data-full="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+            {% else %}
+              <img src="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+            {% endif %}
+          {% endfor %}
+          <span class="gallery__hint" aria-hidden="true">Click to view</span>
+        </div>
+        <dialog class="gallery-modal" onclick="if(event.target===this)this.close()">
+          <div class="gallery-modal__figure">
+            <span class="gallery-modal__counter" aria-hidden="true"></span>
+            <button class="gallery-btn gallery-modal__close" onclick="this.closest('dialog').close()" aria-label="Close">&#10005;</button>
+            <button class="gallery-btn gallery-btn--prev gallery-modal__nav" onclick="galleryModalNav(this,-1)" aria-label="Previous photo">&#8249;</button>
+            <img class="gallery-modal__img" src="" alt="">
+            <button class="gallery-btn gallery-btn--next gallery-modal__nav" onclick="galleryModalNav(this,1)" aria-label="Next photo">&#8250;</button>
+          </div>
+          <p class="gallery-modal__caption"></p>
+        </dialog>
+      {% elsif post.thumb %}
+        {% comment %}
+          Thumbnail only (no photos) → show it, but it is not clickable: there is
+          nothing to enlarge, so no lightbox and no hover hint.
+        {% endcomment %}
+        {% assign thumb_src = '/files/talks/thumbnails/' | append: post.thumb | prepend: base_path %}
+        <div class="gallery__track gallery__track--static">
+          <img src="{{ thumb_src }}" alt="{{ title | strip_html }}" class="gallery__thumb gallery__thumb--static">
+        </div>
+      {% endif %}
+    </div>
+
   </article>
 </div>

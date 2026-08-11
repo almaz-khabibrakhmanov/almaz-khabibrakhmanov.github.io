@@ -1,6 +1,7 @@
 ---
 title: "Universal Pairwise Interatomic van der Waals Potentials Based on Quantum Drude Oscillators"
 collection: publications
+selected: true
 category: manuscripts
 permalink: /publication/2023-Universal_vdW_Potential-JCTC
 excerpt: 'In this paper, I developed a universal analytical vdW potential based on the QDO framework, providing a transferable description of noncovalent interactions across the periodic table. The proposed vdW–QDO potential requires only two free-atom properties ─ the static dipole polarizability $$\alpha_1$$ and the dipole–dipole $$C_6$$ dispersion coefficient. This is achieved by deriving the functional form of the potential from the QDO model, employing scaling laws for the equilibrium distance and the binding energy, and applying the microscopic law of corresponding states. The vdW–QDO potential is shown to be accurate for vdW binding energy curves of noble-gas and group-II dimers, and it is generalized to molecular systems as well. This potential has since been adopted as the long-range module in ML force field frameworks, including SO3LR and FeNNol, demonstrating both its physical soundness and practical utility.'

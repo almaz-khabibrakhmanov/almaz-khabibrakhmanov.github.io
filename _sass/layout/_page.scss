@@ -43,6 +43,23 @@
   }
 }
 
+// Title + action button on one line (e.g. CV page "Download CV" button)
+.page__title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em 0.9em;
+  margin-bottom: 0em;   // section headers are h1 (margin-top: 0), so the row
+                          // must supply the gap before the first section
+
+  .page__title { margin: 0; }
+}
+
+.page__title-btn {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;

@@ -1,7 +1,7 @@
 ---
 title: "Quantum Mechanics"
 collection: teaching
-type: "Course for B.Sc. in Physics"
+type: "Course for B.Sc. in Physics (5 ECTS)"
 permalink: /teaching/2023-spring-teaching-2
 venue: "University of Luxembourg"
 date: 2023-02-23

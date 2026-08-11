@@ -1,0 +1,22 @@
+{% include base_path %}
+
+<div class="list__item">
+  <article class="archive__item archive__item--portfolio" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.link %}<a href="{{ post.link }}" target="_blank" rel="noopener">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
+    </h2>
+
+    {% if post.image %}
+      {% assign img_src = post.image | prepend: base_path %}
+      <div class="portfolio__image">
+        <img src="{{ img_src }}" alt="{{ post.title }}" onclick="portfolioOpen(this)">
+      </div>
+    {% endif %}
+
+    {% if post.content and post.content != '' %}
+      <div class="archive__item-description">{{ post.content | markdownify }}</div>
+    {% endif %}
+
+  </article>
+</div>

@@ -37,6 +37,23 @@
   margin-bottom: 0;
 }
 
+// Intro paragraph shown between a page title and its list (e.g. the Talks page).
+.archive__preamble {
+  margin: 0 0 1.5em;
+  font-size: $type-size-5;
+  color: var(--global-text-color);
+
+  @include breakpoint($medium) {
+    padding-right: $right-sidebar-width-narrow;
+  }
+  @include breakpoint($large) {
+    padding-right: $right-sidebar-width;
+  }
+  @include breakpoint($x-large) {
+    padding-right: $right-sidebar-width-wide;
+  }
+}
+
 .archive__subtitle {
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
@@ -74,6 +91,21 @@
   & + p {
     text-indent: 0;
   }
+}
+
+.archive__item-description {
+  margin-top: 0.35em;
+  font-size: $type-size-5;
+
+  p {
+    margin: 0;
+    & + p { margin-top: 0.4em; }
+  }
+}
+
+// Meta line under the talk title — text in default color, icons de-emphasized (grey)
+.archive__item-meta {
+  i { color: var(--global-text-color-light); }
 }
 
 .archive__item-teaser {
@@ -169,6 +201,73 @@
     }
   }
 
+  // Two-column layout for talks. Uses CSS grid (not flex like --publication) so
+  // the thumbnail can be centred against the DESCRIPTION alone, not the whole
+  // item. Left column = text, right column = thumbnail; rows = title / meta /
+  // description. `.archive__item-body` is set to `display: contents` so its
+  // children (title, meta, description) become grid items directly, letting the
+  // gallery be placed in — and centred within — the description row only.
+  .archive__item--talk {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(110px, 36%, 205px);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 1.2em;
+    align-items: start;
+  }
+
+  .archive__item--talk .archive__item-body {
+    display: contents;
+  }
+
+  .archive__item--talk .archive__item-title {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    margin-top: 0.6em;
+  }
+
+  .archive__item--talk .archive__item-meta {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+  }
+
+  .archive__item--talk .archive__item-description {
+    grid-column: 1;
+    grid-row: 3;
+    min-width: 0;
+  }
+
+  // Talk title links keep the normal hyperlink colour. Just make sure a second
+  // consecutive link (e.g. two linked PI names) is not dimmed by the generic
+  // `.archive__item-title a + a { opacity: 0.5 }` rule, so both links match.
+  .archive__item--talk .archive__item-title a {
+    opacity: 1;
+  }
+
+  // Underline follows the actual link, not the whole heading: when a title only
+  // contains inline links (no conference_url wrapping it), hovering the heading
+  // must not underline the plain-text parts.
+  .archive__item--talk:hover .archive__item-title {
+    text-decoration: none;
+  }
+  .archive__item--talk .archive__item-title a:hover {
+    text-decoration: underline;
+  }
+
+  // Right photo-gallery column — always present (empty when no photos).
+  // Narrower than the publication TOC column so the talk title has more room
+  // (e.g. poster 8 "New Challenges…" fits on one line).
+  .archive__item-gallery {
+    grid-column: 2;
+    grid-row: 3;                  // sit in the description row…
+    align-self: center;           // …and centre the thumbnail against the description only
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   // Stack columns on narrow screens
   @media (max-width: #{$medium}) {
     .archive__item--publication {
@@ -180,6 +279,19 @@
       width: clamp(120px, 60%, 200px);  // mobile: slightly wider relative share
       align-self: center;
     }
+
+    // Collapse the grid to a single stacked column. With the body still
+    // display:contents, its children flatten into the flex column in source
+    // order (title → meta → description → thumbnail).
+    .archive__item--talk {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .archive__item-gallery {
+      width: clamp(120px, 60%, 200px);
+      align-self: center;
+    }
   }
 }
 
@@ -187,6 +299,241 @@
 // paragraph margin-bottom that was previously creating dead space between items)
 .list__item + .list__item {
   margin-top: 1em;
+}
+
+
+/*
+   Talk photo gallery carousel
+   ========================================================================== */
+
+.gallery__track {
+  position: relative;     // anchor for the "Click to view" hint overlay
+  display: block;
+  overflow: hidden;       // only the first photo shows as the thumbnail; the rest
+  border-radius: $border-radius;
+}
+
+.gallery__thumb {
+  width: 100%;            // fill the column width…
+  height: auto;          // …and let height follow the image's own proportions (no crop)
+  display: block;
+  cursor: pointer;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  transition: opacity 0.15s ease;
+
+  &:hover { opacity: 0.82; }
+
+  // Keep only the first photo as the thumbnail; the rest stay in the DOM
+  // (their src / data-full feed the lightbox) but take no layout space.
+  &:not(:first-child) { display: none; }
+
+  // Thumbnail-only talks (no photos): not clickable, so no zoom cursor / dimming.
+  &--static {
+    cursor: default;
+    &:hover { opacity: 1; }
+  }
+}
+
+// "Click to view" label, shown on hover over a clickable thumbnail only.
+.gallery__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.6em;
+  transform: translateX(-50%);
+  padding: 0.2em 0.7em;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: $type-size-6;
+  border-radius: $border-radius;
+  white-space: nowrap;
+  pointer-events: none;   // let the click fall through to the image
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.gallery__track:hover .gallery__hint { opacity: 1; }
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8em;
+  height: 1.8em;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1em;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.15s ease;
+
+  &:hover { background: rgba(0, 0, 0, 0.7); }
+  &--prev { left: 0.3em; }
+  &--next { right: 0.3em; }
+}
+
+dialog.gallery-modal {
+  position: relative;   // anchor for the close button and photo counter
+  padding: 0.5em;
+  border: none;
+  border-radius: $border-radius;
+  background: transparent;
+  max-width: 90vw;
+  max-height: 90vh;
+
+  // Close ("✕") in the upper-right corner of the image. Reuses the round
+  // .gallery-btn look but is pinned to the corner instead of vertically centred.
+  .gallery-modal__close {
+    top: 0.4em;
+    right: 0.4em;
+    transform: none;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+    z-index: 3;
+  }
+
+  // Photo counter ("n/N") in the upper-left corner of the image.
+  .gallery-modal__counter {
+    position: absolute;
+    top: 0.4em;
+    left: 0.4em;
+    z-index: 3;
+    color: #fff;
+    font-size: $type-size-6;
+    line-height: 1.4;
+    padding: 0.1em 0.55em;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: $border-radius;
+  }
+
+  // Image + overlays (counter, close, nav arrows). Shrink-wraps to the image
+  // width and is centred, so the corner-pinned overlays always sit on the
+  // image — even for a narrow/portrait photo with a caption wider than it.
+  .gallery-modal__figure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  // Nav arrows only appear here (in the enlarged view), not on the thumbnail.
+  // Slightly larger than the old thumbnail arrows to suit the full-size image.
+  .gallery-modal__nav {
+    width: 2.2em;
+    height: 2.2em;
+    font-size: 1.4em;
+  }
+
+  .gallery-modal__img {
+    display: block;
+    max-width: 88vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border-radius: $border-radius;
+  }
+
+  .gallery-modal__caption {
+    color: #fff;
+    text-align: center;
+    padding: 0.4em 0.5em 0;
+    font-size: $type-size-6;
+    margin: 0;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+}
+
+
+/*
+   Portfolio — certificate / achievement images
+   ========================================================================== */
+
+.archive__item--portfolio {
+  .archive__item-title { margin-top: 0.6em; }
+
+  // Constrain images to roughly the central text-column width (not full page).
+  // Both width and height are bounded so portrait and landscape certificates
+  // share a consistent footprint.
+  .portfolio__image {
+    margin-top: 0.6em;
+
+    img {
+      display: block;
+      max-width: clamp(260px, 55%, 480px);
+      max-height: 520px;
+      width: auto;
+      height: auto;
+      cursor: zoom-in;
+      border: 1px solid var(--global-border-color);
+      border-radius: $border-radius;
+      transition: opacity 0.15s ease;
+
+      &:hover { opacity: 0.85; }
+    }
+  }
+}
+
+/* CV page — selected publications / talks lists.
+   NOTE: class names are prefixed `cv-sel-` to avoid colliding with the theme's
+   JSON-résumé styles in _json_cv.scss (which define .cv-list, .cv-item-title). */
+.cv-sel-list {
+  // No list-style / padding overrides here: inherit the default <ul> bullet
+  // indent so these lists line up with the markdown lists in the other CV
+  // sections (Experience, Education, …).
+  li + li { margin-top: 0.6em; }
+}
+
+// Talk / teaching titles render as plain body text (same as the rest of the CV).
+.cv-sel-title {
+  font-weight: normal;
+}
+
+.cv-sel-meta {
+  font-size: $type-size-6;
+  color: var(--global-text-color);   // black, not grey
+}
+
+.cv-sel-fulllist {
+  margin-top: 0.4em;
+  font-size: $type-size-6;
+}
+
+// Fullscreen lightbox for portfolio images (click to enlarge)
+dialog.portfolio-modal {
+  padding: 0.5em;
+  border: none;
+  border-radius: $border-radius;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+
+  .portfolio-modal__img {
+    display: block;
+    max-width: 92vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: $border-radius;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
 }
 
 

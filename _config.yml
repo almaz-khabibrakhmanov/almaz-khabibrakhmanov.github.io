@@ -84,17 +84,29 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
   datasets:
     title: 'Datasets'
 
+# Talk Category — no longer used. The Talks page is now a single chronological
+# timeline (see _pages/talks.html); the contribution type is shown in bold in
+# each entry's meta line instead of grouping events under category headings.
+# (The `category:` field in individual _talks/*.md files is likewise inert.)
+# talk_category:
+#   talks:
+#     title: 'Talks'
+#   posters:
+#     title: 'Posters'
+#   participant:
+#     title: 'Participation'
+
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false # if true, shows future posts
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -227,10 +239,10 @@ collections:
     output: false   # set to true to restore individual paper pages
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false   # listing links go to external conference/org URLs; no per-item pages
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

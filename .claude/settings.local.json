@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls files/)",
+      "Bash(find files *)",
+      "Bash(ls files/cv)",
+      "Bash(grep -rnE '\\\\$type-size-[45]\\\\s*:|\\\\$doc-font-size|font-size:.*\\\\$type-size-4' _sass/_variables.scss)",
+      "Bash(grep -rnE '\\\\$type-size-4|\\\\$type-size-5' _sass/)",
+      "Bash(bundle exec *)",
+      "Bash(grep -rln \"permalink: /$\\\\|permalink: /\\\\\"\" _pages)",
+      "Bash(grep -rln \"^permalink: /$\" _pages)",
+      "Bash(sed -n '1,12p' _pages/about.md)",
+      "Bash(ls _includes/head*.html _includes/seo*.html)",
+      "Bash(sed -n '1,60p' _includes/masthead.html)"
+    ]
+  }
+}

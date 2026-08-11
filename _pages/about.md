@@ -1,21 +1,22 @@
 ---
 permalink: /
-title: "Welcome to my personal scholarly website!"
+title: "Privet and welcome to my personal webpage!"
+seo_title: "Almaz Khabibrakhmanov"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a Postdoctoral Researcher in the [Theoretical Chemical Physics](https://tcpunilu.com) group specializing in physics-driven computational approaches to (bio)molecular and materials modeling. My work focuses on accurately and efficiently describing noncovalent interactions, bridging quantum theory and practical molecular simulations.
+I am a Postdoctoral Researcher in the [Theoretical Chemical Physics](https://tcpunilu.com) group of [Prof. Dr. Alexandre Tkatchenko](https://scholar.google.com/citations?user=o2t1Pv8AAAAJ&hl=en&oi=ao), and I am specializing in physics-driven computational approaches to (bio)molecular and materials modeling. My work focuses on accurately and efficiently describing noncovalent interactions, bridging quantum theory and practical molecular simulations.
 
-During my PhD, I developed advanced computational methods, such as the universal van der Waals (vdW) interatomic potentials or many-body dispersion (MBD), to capture subtle many-body vdW interactions and the induced charge polarization effects in complex molecular systems. I am passionate about turning cutting-edge theoretical concepts into robust computational tools that can drive insights in chemistry, biology, and materials science.
+During my PhD, I developed advanced computational methods, such as the [universal van der Waals (vdW) interatomic potentials](https://doi.org/10.1021/acs.jctc.3c00797) or [many-body dispersion (MBD)](https://doi.org/10.1021/jacs.5c13706), to capture subtle many-body vdW interactions and the induced charge polarization effects in complex molecular systems. I am passionate about turning cutting-edge theoretical concepts into robust computational tools that can drive insights in chemistry, biology, and materials science.
 
-My expertise spans noncovalent interactions (especially vdW dispersion), interatomic potentials, chemical physics, and materials modeling. I have a decent hands-on experience with density functional theory (FHI-aims, VASP), quantum chemistry (PySCF, Q-Chem, ORCA), and molecular dynamics (LAMMPS) packages.
+My expertise spans noncovalent interactions (especially vdW dispersion), interatomic potentials, chemical physics, and materials modeling. I have a decent hands-on experience with density functional theory ([FHI-aims](https://fhi-aims.org/), [VASP](https://vasp.at/)), quantum chemistry ([PySCF](https://pyscf.org/), [Q-Chem](https://www.q-chem.com/), [ORCA](https://www.faccts.de/orca/)), and molecular dynamics ([LAMMPS](https://www.lammps.org/)) packages.
 
-I thrive at the intersection of fundamental science and computational innovation, creating models that are both physically rigorous and scalable for real-world research applications. I enjoy collaborating across disciplines and translating sophisticated quantum mechanics concepts into interpretable results. I also take pleasure in communicating science in clear, simple terms, gaining new insights through this process.
+I enjoy collaborating across disciplines and translating sophisticated quantum mechanics concepts into interpretable results. I also take pleasure in teaching and communicating science in clear, simple terms, gaining new insights through this process. Outside research, I am a passionate guitarist and a football player. I also enjoy running, hiking, and reading.
 
-Outside of research, I am a passionate guitarist and a football player. I also enjoy running, hiking, and reading. If you're into heavy music, we might find even more common ground to talk about.
+This webpage is not merely an extension of CV --- I see it also as a personal blog, a place where I can share stories along my scientific path. For example, on the [Conferences](/talks/) page, I wrote something about every scientific meeting I attended and uploaded pictures taken there. Another cool feature is the map of my scientific traveling below.
 
-<h2>Talk map</h2>
+<h2>My scientific map</h2>
 <iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>

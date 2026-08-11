@@ -1,42 +1,117 @@
 var addressPoints = [
   [
-    "<q>The van der Waals \u2013 London Discussions</q><br />University of Strasbourg; Strasbourg, France",
-    48.584614,
-    7.7507127
+    "Carbon Conference 2018",
+    55.4728168,
+    37.3017465
   ],
   [
-    "2024 DPG Spring Meeting (Condensed Matter Section)<br />TU Berlin; Berlin, Germany",
-    52.5173885,
-    13.3951309
+    "USPEX Workshop 2018",
+    55.695262,
+    37.3540969
   ],
   [
-    "2<sup>nd</sup> Reunion Meeting of the IPAM Long Program<br />UCLA Conference Center; Lake Arrowhead, CA, USA",
-    34.2571781,
-    -117.1909059
+    "Total Energy Workshop 2019",
+    45.6496485,
+    13.7772781
   ],
   [
-    "<q>Intermolecular Interactions and Properties of Gases, Liquids and Solids</q> (Satellite Meeting of ICQC 2023)<br />University of Graz; Graz, Austria",
-    47.0708678,
-    15.4382786
+    "Crystal Structure Prediction Workshop 2019",
+    45.6496485,
+    13.7772781
   ],
   [
-    "<q>Electronic Structure Theory and Machine Learning in Materials Science and Computational Chemistry</q>, 2023<br />Hullu Poro Hotel; Levi, Finland",
-    67.7844055,
-    24.8557289
+    "Symposium for Computational Materials 2019",
+    55.695262,
+    37.3540969
   ],
   [
-    "Joint Seminar in the Groups of Prof. Guilia Galli and Prof. Laura Gagliardi<br />University of Chicago; Chicago, IL, USA",
-    41.8755616,
-    -87.6244212
+    "MIPT Scientific Conference",
+    55.4728168,
+    37.3017465
   ],
   [
-    "2022 APS March Meeting<br />McCormick Center; Chicago, IL, USA",
-    41.8755616,
-    -87.6244212
+    "Elbrus Conference 2020",
+    43.2700933,
+    42.4692875
   ],
   [
-    "IPAM Long Program <q>Advancing Quantum Mechanics with Mathematics and Statistics</q>, 2022<br />Institute for Pure and Applied Mathematics (IPAM), UCLA; Los Angeles, CA, USA",
+    "Non-Covalent Interactions Workshop 2021",
+    46.5218269,
+    6.6327025
+  ],
+  [
+    "APS March Meeting 2022",
+    41.8500481,
+    -87.615947
+  ],
+  [
+    "IPAM Long Program QMM 2022",
     34.0536909,
     -118.242766
+  ],
+  [
+    "Psi-k Conference 2022",
+    46.5218269,
+    6.6327025
+  ],
+  [
+    "ESTML Conference 2023",
+    67.8081619,
+    24.8098712
+  ],
+  [
+    "Intermolecular Interactions 2023",
+    47.0582807,
+    15.4602462
+  ],
+  [
+    "vdW/London Discussions 2023",
+    48.5816385,
+    7.7646108
+  ],
+  [
+    "DPG Spring Meeting 2024",
+    52.5110159,
+    13.3269541
+  ],
+  [
+    "ML for Electronic-Structure Theory 2024",
+    41.8755616,
+    -87.6244212
+  ],
+  [
+    "Seminar at Galli and Gagliardi Groups 2024",
+    41.7881243,
+    -87.6047744
+  ],
+  [
+    "DTU Active Summer School (2024)",
+    42.13436,
+    8.59422
+  ],
+  [
+    "2nd Reunion Meeting for QMM 2022 Program (2024)",
+    34.2656668,
+    -117.1869828
+  ],
+  [
+    "WATOC 2025",
+    59.915719,
+    10.7496756
+  ],
+  [
+    "NCAITMS 2025",
+    52.2216394,
+    21.007377
+  ],
+  [
+    "vdW/London Discussions 2025",
+    49.6231923,
+    6.1127596
+  ],
+  [
+    "Seminar at Prof. Maurer Group (2026)",
+    48.2131278,
+    16.3606855
   ]
 ];

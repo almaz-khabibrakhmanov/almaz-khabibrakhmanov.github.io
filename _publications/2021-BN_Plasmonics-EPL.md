@@ -8,7 +8,7 @@ date: 2021-03-22
 venue: 'EPL'
 paperurl: 'https://doi.org/10.1209/0295-5075/133/28002'
 pdfurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2021-BN_Plasmonics-EPL.pdf'
-citation: 'I. N. Volkov, Z. S. Yermekova, <b>A. I. Khabibrakhmanov</b>, A. M. Kovalskii, S. Corthey, A. R. Tameev, A.&nbspE.&nbspAleksandrov, P. B. Sorokin,
+citation: 'I. N. Volkov, Z. S. Yermekova, <b>A. I. Khabibrakhmanov</b>, A. M. Kovalskii, S. Corthey, A. R. Tameev, A.&nbsp;E.&nbsp;Aleksandrov, P. B. Sorokin,
 D. V. Shtansky, A. T. Matveev, <a href="https://doi.org/10.1209/0295-5075/133/28002">Extended UV Detection Bandwidth: h-BN/Al Powder Nanocomposites Photodetectors Sensitive in a Middle UV Region due to Localized Surface Plasmon Resonance Effect</a>, <i>EPL</i> <b>133</b>, 28002 (2021).'
 toc_image: '2021-BN_Plasmonics-EPL.jpg'
 supplementary:

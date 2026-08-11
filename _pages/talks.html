@@ -1,16 +1,67 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Conferences and workshops"
+seo_title: "Almaz Khabibrakhmanov"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<p class="archive__preamble">
+  This page not only navigates the conferences and workshops I attended —
+  it also features the stories behind, the people, and the pictures. 
+  Click on a title to open a relevant webpage, and click on a thumbnail 
+  on the right to open a photo gallery. Maybe some of you 
+  will smile seeing themselves caught in a picture. Enjoy!
+</p>
 
-{% endif %}
-
+{% comment %}
+  Single chronological timeline (newest first). We intentionally do NOT group by
+  talk / poster / participation category: grouping breaks the storyline (a newer
+  event could sit below an older one just because of its contribution type). The
+  type is already shown in bold in each entry's meta line.
+  To flip to oldest-first, remove `reversed`.
+{% endcomment %}
+{% assign talk_total = site.talks | size %}
+{% assign talk_counter = talk_total %}
 {% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+  {% include archive-single-talk.html item_number=talk_counter %}
+  {% assign talk_counter = talk_counter | minus: 1 %}
 {% endfor %}
+
+<script>
+// Open the lightbox at the clicked thumbnail. The full photo list lives in the
+// gallery's .gallery__track; the modal pages through it via the nav buttons.
+function galleryOpen(img) {
+  var gallery = img.closest('.archive__item-gallery');
+  var modal = gallery.querySelector('.gallery-modal');
+  var imgs = Array.prototype.slice.call(gallery.querySelectorAll('.gallery__thumb'));
+  modal._imgs = imgs;
+  modal._idx = imgs.indexOf(img);
+  galleryRender(modal);
+  modal.showModal();
+}
+// Advance the lightbox by dir (-1 / +1), wrapping around.
+function galleryModalNav(btn, dir) {
+  var modal = btn.closest('.gallery-modal');
+  var n = modal._imgs.length;
+  modal._idx = (modal._idx + dir + n) % n;
+  galleryRender(modal);
+}
+// Paint the current photo + caption + counter; hide nav buttons when there is
+// only one photo.
+function galleryRender(modal) {
+  var img = modal._imgs[modal._idx];
+  // A thumbnail may carry a higher-res source in data-full; prefer it in the lightbox.
+  modal.querySelector('.gallery-modal__img').src = img.getAttribute('data-full') || img.src;
+  modal.querySelector('.gallery-modal__caption').textContent = img.alt;
+  // Counter "n/N" (1-based current index over the album total).
+  modal.querySelector('.gallery-modal__counter').textContent =
+    (modal._idx + 1) + '/' + modal._imgs.length;
+  var single = modal._imgs.length < 2;
+  modal.querySelectorAll('.gallery-modal__nav').forEach(function (b) {
+    b.style.display = single ? 'none' : '';
+  });
+}
+</script>

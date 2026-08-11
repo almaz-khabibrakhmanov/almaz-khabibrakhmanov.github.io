@@ -1,14 +1,28 @@
 ---
 layout: archive
 title: "Portfolio"
+seo_title: "Almaz Khabibrakhmanov"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% assign portfolio_items = site.portfolio | sort: 'date' | reverse %}
+{% for post in portfolio_items %}
+  {% include archive-single-portfolio.html %}
 {% endfor %}
 
+<dialog class="portfolio-modal" onclick="if(event.target===this)this.close()">
+  <img class="portfolio-modal__img" src="" alt="">
+</dialog>
+
+<script>
+function portfolioOpen(img) {
+  var modal = document.querySelector('.portfolio-modal');
+  var full = modal.querySelector('.portfolio-modal__img');
+  full.src = img.getAttribute('data-full') || img.src;
+  full.alt = img.alt;
+  modal.showModal();
+}
+</script>

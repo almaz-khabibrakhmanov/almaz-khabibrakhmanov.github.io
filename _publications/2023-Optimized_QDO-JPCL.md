@@ -1,6 +1,7 @@
 ---
 title: "Optimized Quantum Drude Oscillators for Atomic and Molecular Response Properties"
 collection: publications
+selected: false
 category: manuscripts
 permalink: /publication/2023-Optimized_QDO-JPCL
 excerpt: 'Here, we present an optimized parametrization of the QDO model (OQDO), where three parameters of the model (frequency, mass, and charge) are determined by using only dipolar atomic response properties ─ the static polarizability $$\alpha_1$$ and the $$C_6$$ dispersion coefficient. This is achieved by enforcing the $$R_{\rm vdW} \propto \alpha_1^{1/7}$$ scaling law for vdW radii of vdW-bound atomic dimers. The resulting OQDO model accurately reproduces atomic spatial polarization potentials and multipolar dispersion coefficients, providing a balanced and robust parametrization for response properties across the periodic table. My contribution was calculating the QDO polarization potentials and dispersion coefficients, as well as making plots and writing the manuscript.'
