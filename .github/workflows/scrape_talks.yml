@@ -6,18 +6,19 @@ on:
       - 'talks/**'
       - '_talks/**'
       - 'talkmap.ipynb'
+  workflow_dispatch:  # allow manual runs from the Actions tab ("Run workflow" button)
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.9'  # Specify the Python version you need
+        python-version: '3.11'  # 3.10+ required: python-frontmatter now imports typing.TypeGuard
 
     - name: Install dependencies
       run: |
