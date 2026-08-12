@@ -300,3 +300,117 @@
   }
 }
 
+/* ==========================================================================
+   MOBILE HOME-PAGE OVERRIDES
+   Everything here is scoped to viewports below $large — the point where the
+   theme switches from the stacked single-column view to the fixed 3-column
+   desktop layout. Because it is all inside a max-width query, the desktop
+   layout is not affected at all.
+   ========================================================================== */
+
+@media screen and (max-width: #{$large - 1}) {
+
+  /* (1) + (2): stack the author block vertically (avatar → name/bio → links),
+     the way the desktop sidebar already does, so the enlarged photo and the
+     full-width icon row sit cleanly one under another. */
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  /* (1) Enlarge the photo to ~28% of the screen width (was a 36px table cell). */
+  .sidebar .author__avatar {
+    text-align: center;
+    margin-bottom: 0.6em;
+
+    img {
+      width: 28vw;
+      max-width: 28vw;
+    }
+  }
+
+  .sidebar .author__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* (2) Remove the "Follow" button and show the social links as a single
+     full-width row of logos only — labels ("ORCID", "ResearchGate", …) hidden,
+     no tap-to-open dropdown. */
+  .sidebar .author__urls-wrapper button {
+    display: none;
+  }
+
+  .sidebar .author__urls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    width: 100%;
+    margin: 0.4em 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+    /* Dropdown pointer arrows are meaningless once it is an inline row. */
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    li {
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    a {
+      font-size: 0;          /* collapse the text label… */
+      padding: 0;
+      margin: 0;
+
+      i {
+        font-size: 1.6rem;   /* …while keeping the logo tappable */
+      }
+    }
+  }
+
+  /* (3) Move Latest News below the about text, and slim it down. #main is a
+     plain block at this width (its susy columns only kick in >= $large), so
+     turning it into a flex column lets us reorder its three children without
+     disturbing the desktop layout. The clearfix pseudo-elements would otherwise
+     show up as stray flex items, so switch them off here. */
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+  #main::before,
+  #main::after {
+    display: none;
+  }
+  #main > .sidebar        { order: 1; }   /* author profile */
+  #main > article.page    { order: 2; }   /* about.md text + scientific map */
+  #main > .sidebar__right { order: 3; }   /* Latest News, now last */
+
+  /* Narrower (−10%) and centred. */
+  .sidebar__right {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Font bumped from 0.75em to 1em to match the main body text; panel height
+     cap reduced 20% (80vh → 64vh). */
+  .sidebar__right .latest-news {
+    font-size: $type-size-5;
+    max-height: 64vh;
+  }
+  .sidebar__right .latest-news li {
+    font-size: $type-size-5;
+  }
+}
+
