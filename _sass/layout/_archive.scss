@@ -525,12 +525,16 @@ dialog.gallery-modal {
 
 // On phones the default ~2.5em list indent wastes horizontal space and stacks
 // into a "ladder". De-indent the CV's top-level bullets so they sit at the left
-// margin (nested sub-bullets keep their relative indent, preserving hierarchy).
+// margin, and tighten the nested (2nd-level) bullets from the ~2.5em default to
+// 1.5em so sub-items still read as nested but aren't pushed far right.
 // Scoped to the CV page via .cv-sel-list, which no other page uses; desktop keeps
 // the normal indent.
 @media screen and (max-width: #{$large - 1}) {
   .archive:has(.cv-sel-list) > ul {
     padding-left: 1.1em;
+  }
+  .archive:has(.cv-sel-list) ul ul {
+    padding-left: 1.5em;
   }
 }
 
