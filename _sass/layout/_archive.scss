@@ -380,7 +380,18 @@
 }
 
 dialog.gallery-modal {
-  position: relative;   // anchor for the close button and photo counter
+  // A modal <dialog> is centred in the viewport by the browser's default
+  // `position: fixed`. We must NOT override that to `relative`: doing so drops
+  // the dialog back into normal document flow, so opening it scrolls the page to
+  // the dialog's in-flow position (deep inside the article) — the page appears
+  // to jump to the top. Keep it fixed and hard-centre it. The close button and
+  // counter don't need this element positioned: they anchor to
+  // `.gallery-modal__figure`, which is `position: relative` in its own right.
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   padding: 0.5em;
   border: none;
   border-radius: $border-radius;

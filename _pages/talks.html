@@ -46,6 +46,17 @@ function galleryOpen(img) {
   var imgs = Array.prototype.slice.call(gallery.querySelectorAll('.gallery__thumb'));
   modal._imgs = imgs;
   modal._idx = imgs.indexOf(img);
+  /*
+    Keep the page's scroll position when the lightbox closes. A modal <dialog>
+    restores focus, on close, to whatever was focused before showModal(). An
+    <img> is not focusable by default, so focus would fall back to <body> and the
+    browser would scroll the page to the top. Making this thumbnail momentarily
+    focusable (tabindex -1) and focusing it first — with preventScroll so the
+    page does not move — means the dialog hands focus straight back to the
+    thumbnail (already on screen) on close, leaving your scroll position intact.
+  */
+  img.tabIndex = -1;
+  img.focus({ preventScroll: true });
   galleryRender(modal);
   modal.showModal();
 }
