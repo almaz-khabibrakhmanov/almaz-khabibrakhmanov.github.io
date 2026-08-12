@@ -365,14 +365,12 @@
   .sidebar .author__urls {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;           /* wrap to a 2nd row rather than overflow the screen */
-    justify-content: center;   /* (3) centred group, with margins on both sides */
+    flex-wrap: wrap;           /* safety net: wrap rather than overflow the screen */
+    justify-content: space-between;  /* (3) spread the logos across the band… */
     align-items: center;
-    gap: 0.6rem 1.15rem;       /* uniform spacing between the logos */
     position: static;
-    width: 100%;               /* full width so centring has room; the icons only
-                                  take the space they need and stay centred */
-    margin: 1.25em 0 0;        /* (4) vertical gap between the bio and the logo row */
+    width: 65%;                /* …which occupies ~65%, centred → margins each side */
+    margin: 1.25em auto 0;     /* (4) gap above the row; auto L/R centres the band */
     padding: 0;
     border: 0;
     background: transparent;
@@ -395,7 +393,12 @@
       margin: 0;
 
       i {
-        font-size: 1.6rem;   /* …while keeping the logo tappable */
+        font-size: 1.4rem;   /* …while keeping the logo tappable */
+        width: auto;         /* drop Font Awesome's fixed 1.25em box and the
+                                icon-pad-right label spacing, so the 7 icons are
+                                compact enough to sit inside the 65% band */
+        padding: 0;
+        margin: 0;
       }
     }
   }
