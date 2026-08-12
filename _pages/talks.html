@@ -82,4 +82,25 @@ function galleryRender(modal) {
     b.style.display = single ? 'none' : '';
   });
 }
+/*
+  Preload on hover. Each gallery's visible thumbnail is a small image whose
+  full-resolution photo (data-full) is only fetched when the lightbox opens —
+  that first fetch is the brief blank moment on open. Prefetching data-full the
+  moment the cursor lands on the thumbnail means it is usually cached by the time
+  you click, so the lightbox fills in instantly. Only the first slot carries
+  data-full (the other photos already load with the page), and we prefetch each
+  one only once. This script sits after the thumbnails in the page, so they are
+  already in the DOM here.
+*/
+Array.prototype.forEach.call(
+  document.querySelectorAll('.gallery__thumb[data-full]'),
+  function (thumb) {
+    thumb.addEventListener('mouseenter', function () {
+      if (thumb._preloaded) { return; }
+      thumb._preloaded = true;
+      var pre = new Image();
+      pre.src = thumb.getAttribute('data-full');
+    });
+  }
+);
 </script>

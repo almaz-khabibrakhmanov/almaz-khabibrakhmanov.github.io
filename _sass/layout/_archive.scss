@@ -634,6 +634,51 @@ dialog.toc-modal {
 
 
 /*
+   Award certificate lightbox (native <dialog>) on the CV page
+   ========================================================================== */
+
+// The award text rendered as a clickable link (opens the certificate lightbox).
+.award-link {
+  color: var(--global-link-color);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// No `position` override here: the browser centres a modal <dialog> in the
+// viewport by default (position: fixed). Overriding it drops the dialog into
+// normal flow and makes the page scroll-jump on open — same trap the gallery
+// modal hit. Mirror the working .toc-modal instead.
+dialog.award-modal {
+  padding: 0;
+  border: none;
+  border-radius: $border-radius;
+  background: transparent;
+  // Certificate is portrait, so height is the binding dimension — keep it well
+  // inside the viewport rather than near-fullscreen like the wide TOC figures.
+  max-width: 80vw;
+  max-height: 72vh;
+
+  img {
+    display: block;
+    max-width: 80vw;
+    max-height: 72vh;
+    width: auto;
+    height: auto;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+  }
+}
+
+
+/*
    Grid view
    ========================================================================== */
 

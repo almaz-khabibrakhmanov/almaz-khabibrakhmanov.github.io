@@ -26,5 +26,7 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
 
-  - title: "Portfolio"
-    url: /portfolio/
+  # Portfolio hidden from the header for now (page and collection still exist at
+  # /portfolio/, just unlinked). Uncomment to bring it back.
+  # - title: "Portfolio"
+  #   url: /portfolio/

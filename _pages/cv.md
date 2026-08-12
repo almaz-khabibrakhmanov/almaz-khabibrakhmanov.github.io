@@ -77,8 +77,27 @@ Selected Conferences
 </ul>
 <p class="cv-sel-fulllist"><a href="{{ base_path }}/talks/">See the full list of talks &amp; posters &rarr;</a></p>
 
-Teaching
+Awards
 ------
+<ul class="cv-sel-list">
+  <li>
+    {% comment %} The award text itself is the click target; it opens a self-contained
+    <dialog> lightbox of the certificate photo. Same no-JS pattern as the Publications
+    TOC images, so it survives the production HTML minifier. {% endcomment %}
+    <a class="award-link" tabindex="0" onclick="this.nextElementSibling.showModal()">Best Poster Award at the NCAITMS conference, Warsaw (2025)</a>
+    <dialog class="award-modal" onclick="this.close()">
+      <img src="{{ base_path }}/files/portfolio/NCAITMS_best_poster.jpg" alt="Best Poster Award certificate, NCAITMS conference, Warsaw 2025">
+    </dialog>
+  </li>
+  <li><i>Summa cum Laude</i> graduation from B.Sc. (2018) and M.Sc. (2020)</li>
+  <li>Letter of acknowledgement for achievements in study and in student life, Russian Ministry of Science and Higher Education (2020)</li>
+  <li>Increased Academic Scholarship for excellence in study (2017&ndash;2020)</li>
+  <li>Alexander Abramov's Fund Scholarship for excellence in study (2015&ndash;2017)</li>
+</ul>
+
+Teaching & Service
+------
+* Reviewer for <i>The Journal of Chemical Physics</i> and <i>Journal of Chemical Theory and Computation</i> since 2023
 {% assign teaching_items = site.teaching | sort: 'date' | reverse %}
 <ul class="cv-sel-list">
 {% for post in teaching_items %}
@@ -89,6 +108,4 @@ Teaching
 {% endfor %}
 </ul>
 
-Service
-------
-* Reviewer for <i>The Journal of Chemical Physics</i> and <i>Journal of Chemical Theory and Computation</i> since 2023.
+
