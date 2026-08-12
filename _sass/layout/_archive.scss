@@ -523,6 +523,17 @@ dialog.gallery-modal {
   font-size: $type-size-6;
 }
 
+// On phones the default ~2.5em list indent wastes horizontal space and stacks
+// into a "ladder". De-indent the CV's top-level bullets so they sit at the left
+// margin (nested sub-bullets keep their relative indent, preserving hierarchy).
+// Scoped to the CV page via .cv-sel-list, which no other page uses; desktop keeps
+// the normal indent.
+@media screen and (max-width: #{$large - 1}) {
+  .archive:has(.cv-sel-list) > ul {
+    padding-left: 1.1em;
+  }
+}
+
 // Fullscreen lightbox for portfolio images (click to enlarge)
 dialog.portfolio-modal {
   padding: 0.5em;

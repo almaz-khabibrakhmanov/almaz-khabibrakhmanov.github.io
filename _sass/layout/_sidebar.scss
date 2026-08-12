@@ -427,7 +427,7 @@
      the nav. Scoping to :has(.sidebar__right) fixes that at the root.)
      ---------------------------------------------------------------------- */
   body:has(.sidebar__right) {
-    padding-top: 3.25em;          /* (2) tighter top; other pages keep the full 70px clearance */
+    padding-top: 0;               /* (1) tighter top; other pages keep the full 70px clearance */
 
     .sidebar { margin-top: 0; }   /* drop the portrait-orientation 1em gap */
   }
@@ -446,23 +446,25 @@
        could force #main past the screen. Let them shrink to the container. */
     > * { min-width: 0; max-width: 100%; }
 
-    > .sidebar        { order: 1; margin-bottom: 1.5em; }  /* (4) space before the intro text */
+    > .sidebar        { order: 1; margin-bottom: 2.25em; }  /* (3) space below the logos, before the intro text */
     > article.page    { order: 2; }   /* about.md text + scientific map */
     > .sidebar__right { order: 3; }   /* Latest News, now last */
   }
 
-  /* (5) Wider (95%), centred, and pulled up to halve the gap above the panel. */
+  /* (2) Full-width, centred, pulled up above the panel. */
   .sidebar__right {
-    width: 95%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -1em;
   }
 
-  /* Font matches the main body text; height cap 70vh. */
+  /* Font matches the main body text; height cap 70vh; panel's internal top
+     padding halved (0.75rem -> 0.375rem). */
   .sidebar__right .latest-news {
     font-size: $type-size-5;
     max-height: 70vh;
+    padding-top: 0.375rem;
   }
   .sidebar__right .latest-news li {
     font-size: $type-size-5;
