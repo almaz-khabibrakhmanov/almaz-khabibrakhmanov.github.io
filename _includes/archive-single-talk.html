@@ -31,11 +31,22 @@
         <div class="gallery__track">
           {% for photo in post.photos %}
             {% assign photo_src = '/files/talks/photos/' | append: photo.file | prepend: base_path %}
-            {% if forloop.first and post.thumb %}
-              {% assign thumb_src = '/files/talks/thumbnails/' | append: post.thumb | prepend: base_path %}
-              <img src="{{ thumb_src }}" data-full="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+            {% comment %}
+              Only the first photo is the visible thumbnail, so it loads eagerly.
+              The rest are display:none and exist only to hand their URL/caption to
+              the lightbox — loading="lazy" keeps the browser from downloading them
+              on page load (they were ~110 MB of eager fetches). The lightbox reads
+              their src string on demand, which works whether or not they loaded.
+            {% endcomment %}
+            {% if forloop.first %}
+              {% if post.thumb %}
+                {% assign thumb_src = '/files/talks/thumbnails/' | append: post.thumb | prepend: base_path %}
+                <img src="{{ thumb_src }}" data-full="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+              {% else %}
+                <img src="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+              {% endif %}
             {% else %}
-              <img src="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)">
+              <img src="{{ photo_src }}" alt="{{ photo.caption }}" class="gallery__thumb" onclick="galleryOpen(this)" loading="lazy">
             {% endif %}
           {% endfor %}
           <span class="gallery__hint" aria-hidden="true">Click to view</span>
