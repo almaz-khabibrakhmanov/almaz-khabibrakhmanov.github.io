@@ -403,40 +403,53 @@
     }
   }
 
-  /* (3) Move Latest News below the about text, and slim it down. #main is a
-     plain block at this width (its susy columns only kick in >= $large), so
-     turning it into a flex column lets us reorder its three children without
-     disturbing the desktop layout. The clearfix pseudo-elements would otherwise
-     show up as stray flex items, so switch them off here. */
-  /* (2) Trim the fixed-masthead clearance: the reserved 70px is generous for the
-     shorter mobile header, so pull it in (kept safely below the header). */
-  body {
-    padding-top: 3.25em;
-  }
-
-  #main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;             /* (1) remove the extra gap under the masthead */
-    max-width: 100%;           /* never grow past the viewport (base max-width is 925px) */
-  }
-  #main::before,
-  #main::after {
+  /* Hide the author profile (avatar / bio / links) on every page EXCEPT Home.
+     On a phone it's just a tall, repeated block sitting above the real content
+     of Publications, Conferences, etc. Home is identified by its Latest-News
+     right sidebar. Desktop is unaffected — it still shows the profile as the
+     fixed left sidebar. */
+  #main:not(:has(.sidebar__right)) .sidebar {
     display: none;
   }
-  /* Flex items default to min-width:auto (min-content), so a wide child — e.g. the
-     map iframe — would force #main past the screen and cut off content on the
-     right. Let them shrink to the container instead. */
-  #main > * {
-    min-width: 0;
-    max-width: 100%;
+
+  /* ----------------------------------------------------------------------
+     HOME PAGE ONLY.
+     The flex reorder (Latest News below the intro text) and the tightened top
+     spacing are needed only on the home page. We target it via its Latest-News
+     right sidebar (.sidebar__right), which exists on NO other page. This leaves
+     archive pages (Publications, Conferences, …) in normal document flow with
+     their default masthead clearance — so their title keeps its space under the
+     nav and nothing there gets reordered.
+
+     (Previously these rules were global: #main became a flex column on every
+     mobile page, and the archive layout's `.archive` block — which has no order
+     set — jumped to order:0 above the author profile, tucking the title under
+     the nav. Scoping to :has(.sidebar__right) fixes that at the root.)
+     ---------------------------------------------------------------------- */
+  body:has(.sidebar__right) {
+    padding-top: 3.25em;          /* (2) tighter top; other pages keep the full 70px clearance */
+
+    .sidebar { margin-top: 0; }   /* drop the portrait-orientation 1em gap */
   }
-  .sidebar {
-    margin-top: 0;             /* (1) also drop the portrait-orientation 1em gap */
+
+  #main:has(.sidebar__right) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;                /* (1) remove the extra gap under the masthead */
+    max-width: 100%;              /* never grow past the viewport */
+
+    /* Clearfix pseudo-elements would otherwise become stray flex items. */
+    &::before,
+    &::after { display: none; }
+
+    /* Flex items default to min-width:auto, so a wide child (e.g. the map iframe)
+       could force #main past the screen. Let them shrink to the container. */
+    > * { min-width: 0; max-width: 100%; }
+
+    > .sidebar        { order: 1; margin-bottom: 1.5em; }  /* (4) space before the intro text */
+    > article.page    { order: 2; }   /* about.md text + scientific map */
+    > .sidebar__right { order: 3; }   /* Latest News, now last */
   }
-  #main > .sidebar        { order: 1; margin-bottom: 1.5em; }  /* (4) breathing room before the intro text */
-  #main > article.page    { order: 2; }   /* about.md text + scientific map */
-  #main > .sidebar__right { order: 3; }   /* Latest News, now last */
 
   /* (5) Wider (95%), centred, and pulled up to halve the gap above the panel. */
   .sidebar__right {
