@@ -365,12 +365,14 @@
   .sidebar .author__urls {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-wrap: wrap;           /* wrap to a 2nd row rather than overflow the screen */
+    justify-content: center;   /* (3) centred group, with margins on both sides */
     align-items: center;
+    gap: 0.6rem 1.15rem;       /* uniform spacing between the logos */
     position: static;
-    width: 63%;                /* (3) ~10% tighter band, centred → margins each side */
-    margin: 1.25em auto 0;     /* (4) vertical gap between the bio and the logo row */
+    width: 100%;               /* full width so centring has room; the icons only
+                                  take the space they need and stay centred */
+    margin: 1.25em 0 0;        /* (4) vertical gap between the bio and the logo row */
     padding: 0;
     border: 0;
     background: transparent;
