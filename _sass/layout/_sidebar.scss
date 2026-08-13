@@ -443,8 +443,12 @@
          inverts and the phone takes the desktop branch. The result was a full
          masthead height of dead space above the avatar. The style is inline, so
          only !important can undo it; the JS lives in the prebuilt main.min.js
-         and cannot be patched without `npm run uglify`. */
-      padding-top: 0 !important;
+         and cannot be patched without `npm run uglify`.
+
+         The value below is therefore the WHOLE gap between the nav border and
+         the avatar — it replaces the clearance rather than adding to it, so
+         keep it small (a masthead is ~3.25em; that is what we are undoing). */
+      padding-top: 1em !important;
     }
   }
 
