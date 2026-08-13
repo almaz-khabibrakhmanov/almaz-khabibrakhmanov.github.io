@@ -1,0 +1,31 @@
+{% include base_path %}
+
+{% comment %}
+  A single research figure: thumbnail + click-to-enlarge <dialog>, with an
+  optional caption. Extracted so the theme template can render either one figure
+  or a stacked list of them through the same markup.
+
+  Parameters: file (required, filename inside /files/research/), alt, caption,
+  title (theme title, used as the alt fallback).
+
+  NOTE the onclick scopes its lookup to .research-figure-item, NOT to the
+  surrounding .archive__item-figure column. With several figures stacked in one
+  column, a lookup on the column would match the first dialog every time and
+  every thumbnail would open the same image.
+{% endcomment %}
+
+{% assign fig_src = '/files/research/' | append: include.file | prepend: base_path %}
+{% assign fig_alt = include.alt | default: include.title %}
+
+<div class="research-figure-item">
+  <img src="{{ fig_src }}"
+       alt="{{ fig_alt }}"
+       class="research-figure"
+       onclick="this.closest('.research-figure-item').querySelector('.research-modal').showModal()">
+  <dialog class="research-modal" onclick="this.close()">
+    <img src="{{ fig_src }}" alt="{{ fig_alt }} (enlarged)">
+  </dialog>
+  {% if include.caption and include.caption != '' %}
+    <p class="research-figure__caption">{{ include.caption }}</p>
+  {% endif %}
+</div>

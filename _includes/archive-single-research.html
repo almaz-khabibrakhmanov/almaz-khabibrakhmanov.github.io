@@ -1,0 +1,91 @@
+{% include base_path %}
+
+{% comment %}
+  One research theme. Mirrors archive-single-publication.html: text body on the
+  left, an optional figure on the right that opens full size in a <dialog>.
+
+  Front matter it reads (all optional except title/order):
+    title:         theme heading
+    order:         integer, controls position on /research/ (ascending)
+    summary:       one-line hook shown in italics under the heading
+    figure:        filename inside /files/research/ (single-figure shorthand)
+    figure_alt:    alt text; falls back to the title
+    figure_caption: small caption under the figure
+    figures:       list of { file, alt, caption } to stack several figures in the
+                   right-hand column, top to bottom. Takes precedence over
+                   `figure:` — use one form or the other, not both.
+    ongoing:       unpublished strand of this theme; rendered in a set-off block
+                   under an "In progress" tag so the claim is explicit and can
+                   never be mistaken for published work
+    key_papers:    list of { label, url } rendered as a single trailing line
+
+  The body of the .md file is the prose, rendered as markdown.
+{% endcomment %}
+
+{% assign has_figure = false %}
+{% if post.figures and post.figures.size > 0 %}{% assign has_figure = true %}{% endif %}
+{% if post.figure and post.figure != '' %}{% assign has_figure = true %}{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item archive__item--research" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="archive__item-body">
+
+      <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
+
+      {% comment %}
+        Everything below the title is wrapped in one element so the figure column
+        can be centred against the prose alone, excluding the heading. Keeping it
+        as a single wrapper (rather than placing each part on its own grid row)
+        means optional fields — summary, ongoing, key_papers — can come and go
+        without the grid needing to know.
+      {% endcomment %}
+      <div class="research__text">
+
+        {% if post.summary and post.summary != '' %}
+          <p class="research__summary">{{ post.summary }}</p>
+        {% endif %}
+
+        <div class="archive__item-description" itemprop="description">
+          {{ post.content | markdownify }}
+        </div>
+
+        {% if post.ongoing and post.ongoing != '' %}
+          <div class="research__ongoing">
+            <span class="research__ongoing-tag">In progress</span>
+            {{ post.ongoing | markdownify }}
+          </div>
+        {% endif %}
+
+        {% if post.key_papers %}
+          <p class="research__key-papers">
+            <span class="research__key-papers-label">Key papers:</span>
+            {% for paper in post.key_papers %}
+              <a href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.label }}</a>{% unless forloop.last %} &middot; {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+
+      </div><!-- /.research__text -->
+
+    </div><!-- /.archive__item-body -->
+
+    {% if has_figure %}
+      {% comment %}
+        Each figure is rendered by research-figure.html: thumbnail plus a
+        click-to-enlarge <dialog>, driven by an inline onclick — the same no-JS
+        pattern as the Publications TOC images and the CV award. Deliberately not
+        a <script> block: the production build minifies each page onto one line.
+      {% endcomment %}
+      <div class="archive__item-figure">
+        {% if post.figures and post.figures.size > 0 %}
+          {% for fig in post.figures %}
+            {% include research-figure.html file=fig.file alt=fig.alt caption=fig.caption title=post.title %}
+          {% endfor %}
+        {% else %}
+          {% include research-figure.html file=post.figure alt=post.figure_alt caption=post.figure_caption title=post.title %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </article>
+</div>

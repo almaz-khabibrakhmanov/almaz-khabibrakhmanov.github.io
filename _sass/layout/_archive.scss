@@ -201,6 +201,117 @@
     }
   }
 
+  // Two-column layout for research themes. Uses CSS grid (like --talk, not flex
+  // like --publication) so the figure can be centred against the PROSE alone
+  // rather than the whole item — with a flex row the title's height drags the
+  // figure downwards. `.archive__item-body` becomes display:contents so its two
+  // children (title, text wrapper) act as grid items directly.
+  .archive__item--research {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(140px, 45%, 300px);
+    grid-template-rows: auto 1fr;
+    column-gap: 1.2em;
+    align-items: start;
+  }
+
+  .archive__item--research .archive__item-body {
+    display: contents;
+  }
+
+  .archive__item--research .archive__item-title {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    margin-top: 0.6em;
+  }
+
+  .research__text {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+  }
+
+  .archive__item-figure {
+    grid-column: 2;
+    grid-row: 2;            // sit in the prose row…
+    align-self: center;     // …and centre against the prose only
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Several figures stack top to bottom in this column; space them apart.
+    .research-figure-item {
+      width: 100%;
+
+      + .research-figure-item {
+        margin-top: 1.2em;
+      }
+    }
+
+    img.research-figure {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      border: 1px solid var(--global-border-color);
+      border-radius: $border-radius;
+      transition: opacity 0.15s ease;
+
+      &:hover {
+        opacity: 0.82;
+      }
+    }
+  }
+
+  .research-figure__caption {
+    margin: 0.5em 0 0;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+    text-align: center;
+  }
+
+  .research__summary {
+    margin: 0 0 0.8em;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+
+  // Unpublished strand of a theme. Set off with a rule and a tag so a reader can
+  // never mistake it for published work.
+  .research__ongoing {
+    margin: 1em 0 0;
+    padding-left: 0.9em;
+    border-left: 3px solid var(--global-border-color);
+
+    p {
+      margin: 0.3em 0 0;
+    }
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .research__ongoing-tag {
+    display: inline-block;
+    font-size: $type-size-7;
+    font-family: $sans-serif-narrow;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--global-text-color-light);
+  }
+
+  .research__key-papers {
+    margin-top: 0.8em;
+    font-size: $type-size-6;
+  }
+
+  .research__key-papers-label {
+    font-weight: bold;
+    margin-right: 0.3em;
+  }
+
   // Two-column layout for talks. Uses CSS grid (not flex like --publication) so
   // the thumbnail can be centred against the DESCRIPTION alone, not the whole
   // item. Left column = text, right column = thumbnail; rows = title / meta /
@@ -278,6 +389,20 @@
       flex: 0 0 auto;
       width: clamp(120px, 60%, 200px);  // mobile: slightly wider relative share
       align-self: center;
+    }
+
+    // Collapse the grid to a stacked column. With the body still display:contents,
+    // its children flatten into the flex column in source order (title → text →
+    // figures).
+    .archive__item--research {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .archive__item-figure {
+      width: clamp(140px, 75%, 260px);  // figures carry detail — give them room
+      align-self: center;
+      margin-top: 0.8em;
     }
 
     // Collapse the grid to a single stacked column. With the body still
@@ -624,6 +749,30 @@ a.pub-btn {
 /*
    TOC image lightbox (native <dialog>)
    ========================================================================== */
+
+// Research figures, enlarged. Same construction as .toc-modal.
+dialog.research-modal {
+  padding: 0;
+  border: none;
+  border-radius: $border-radius;
+  background: transparent;
+  max-width: 90vw;
+  max-height: 90vh;
+
+  img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+  }
+}
+
 
 dialog.toc-modal {
   padding: 0;

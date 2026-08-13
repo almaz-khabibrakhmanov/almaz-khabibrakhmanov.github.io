@@ -231,6 +231,9 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  research:
+    output: false   # themes are sections of the /research/ page, not standalone pages
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -262,6 +265,13 @@ defaults:
   - scope:
       path: ""
       type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _research
+  - scope:
+      path: ""
+      type: research
     values:
       layout: single
       author_profile: true

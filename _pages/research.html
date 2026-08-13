@@ -1,0 +1,30 @@
+---
+layout: archive
+title: "Research"
+seo_title: "Almaz Khabibrakhmanov"
+permalink: /research/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="archive__preamble">
+  Noncovalent interactions are weak, ubiquitous, and still badly captured by the
+  approximations most simulations rely on. My work approaches them from a single
+  angle: build a minimal quantum model of how electrons respond, use it to ask
+  what van der Waals interactions actually do to electronic structure, and turn
+  the answer into potentials that survive in production simulations. The
+  directions below follow that thread — from the coarse-grained model at its
+  core, through the physics it exposes, to where it runs at scale.
+</p>
+
+{% comment %}
+  Themes come from the _research collection, ordered by the `order:` field in each
+  file's front matter (ascending). Reordering means editing that number only — no
+  changes here. The collection has output: false in _config.yml, so no standalone
+  page is generated per theme; they exist purely as sections of this page.
+{% endcomment %}
+{% assign research_themes = site.research | sort: 'order' %}
+{% for post in research_themes %}
+  {% include archive-single-research.html %}
+{% endfor %}
