@@ -15,33 +15,33 @@ title_button:
 
 Professional Experience
 ------
-* March 2025 - present: <b>Postdoctoral Scholar</b>
+* March 2025 -- present: <b>Postdoctoral Scholar</b>
   * University of Luxembourg, [TCP group](https://tcpunilu.com/)
   * Advisor: [Prof. Dr. Alexandre Tkatchenko](https://scholar.google.com/citations?user=o2t1Pv8AAAAJ&hl=en&oi=ao)
  
-* March - June 2022: <b>Visiting Graduate Researcher</b>
+* March -- June 2022: <b>Visiting Graduate Researcher</b>
   * [Institute for Pure and Applied Mathematics](https://www.ipam.ucla.edu/programs/long-programs/advancing-quantum-mechanics-with-mathematics-and-statistics/), UCLA, Los Angeles
   * Advisor: Prof. Dr. Alexandre Tkatchenko
 
-* January 2021 - March 2025: <b>Doctoral Researcher</b>
+* January 2021 -- March 2025: <b>Doctoral Researcher</b>
   * University of Luxembourg, TCP group
   * Advisor: Prof. Dr. Alexandre Tkatchenko
 
-* October 2019 - November 2020: <b>Research Assistant</b>
+* October 2019 -- November 2020: <b>Research Assistant</b>
   * NUST "MISiS", [Laboratory of Digital Materials Science](https://ldms.misis.ru/main_en), Moscow
   * Advisor: [Prof. Dr. Pavel Sorokin](https://scholar.google.com/citations?user=41ttua4AAAAJ&hl=en&oi=ao)
 
-* September 2017 - June 2020: <b>Research Assistant</b>
+* September 2017 -- June 2020: <b>Research Assistant</b>
   * Technological Institute for Superhard and Novel Carbon Materials, Moscow
   * Advisor: Prof. Dr. Pavel Sorokin
 
 Education
 ------
-* Ph.D in Physics, University of Luxembourg, 2025
+* 2025 -- Ph.D. in Physics, University of Luxembourg
   * Thesis: [Bridging Quantum Drude Oscillators and Electronic-Structure Theory for van der Waals Dispersion Interactions](https://tcpunilu.com/pages/assets/img/Theses/AKhabibrakhmanov2025.pdf)  
-* M.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2018
+* 2020 -- M.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology
   * Thesis: [Theoretical Study of Diamond-Like Carbon Nanostructures and Their Mechanical Stiffness](https://almaz-khabibrakhmanov.github.io/files/theses/AKhabibrakhmanov_MSc_Thesis_2020.pdf) (RU)
-* B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology, 2014
+* 2018 -- B.Sc. in Applied Mathematics & Physics, Moscow Institute of Physics and Technology
   * Thesis: [Theoretical Investigation of the Atomic Structure and Mechanical Properties of Novel Dense sp<sup>3</sup>-Carbon Nanostructures](https://almaz-khabibrakhmanov.github.io/files/theses/AKhabibrakhmanov_BSc_Thesis_2018.pdf) (RU)
 
 Skills & Software Experience
@@ -91,8 +91,8 @@ Awards
   </li>
   <li><i>Summa cum Laude</i> graduation from B.Sc. (2018) and M.Sc. (2020)</li>
   <li>Letter of acknowledgement for achievements in study and in student life, Russian Ministry of Science and Higher Education (2020)</li>
-  <li>Increased Academic Scholarship for excellence in study (2017&ndash;2020)</li>
-  <li>Alexander Abramov's Fund Scholarship for excellence in study (2015&ndash;2017)</li>
+  <li>Increased Academic Scholarship for excellence in study (2017 &ndash; 2020)</li>
+  <li>Alexander Abramov's Fund Scholarship for excellence in study (2015 &ndash; 2017)</li>
 </ul>
 
 Teaching & Service
