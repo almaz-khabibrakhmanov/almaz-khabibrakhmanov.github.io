@@ -321,6 +321,62 @@
 
 
 /*
+   Masthead site title -> "Home" swap (mobile only)
+   ==========================================================================
+   The site title is a `persist` item, so the greedy nav can never evict it —
+   on a phone "Almaz Khabibrakhmanov" ate most of the row and pushed every real
+   link into the dropdown. Below $medium we swap it for a plain "Home", and on
+   the home page itself we hide it outright (the name is already in the author
+   block, and the link would point at the current page). `display: none` also
+   takes the item out of greedy-nav's width maths, which is what frees the room
+   for Publications + Conferences. No JS change needed: updateNav() re-measures
+   on load and resize by itself.
+
+   Above $medium the full nav already fits with the real title, so the desktop
+   and tablet masthead are untouched. */
+
+.masthead__home-label {
+  display: none;
+}
+
+@media screen and (max-width: #{$medium - 1}) {
+  .greedy-nav {
+    /* Tighter gaps buy back the room for a second real link. If "Conferences"
+       still folds into the dropdown on a narrow phone, lower this to 0.45rem. */
+    a {
+      margin: 0 0.6rem;
+    }
+
+    .visible-links {
+      .masthead__site-title {
+        display: none;
+      }
+
+      .masthead__home-label {
+        display: inline;
+        font-weight: 400;  /* override the bold on .visible-links li:first-child */
+      }
+
+      .masthead__menu-item--lg {
+        padding-right: 0;  /* branding gutter is pointless for a plain nav item */
+      }
+
+      .masthead__menu-item--home-current {
+        display: none;
+      }
+
+      /* :first-child still matches the hidden title, so the link that actually
+         comes first would keep a stray left margin and sit out of line with the
+         page content below. */
+      .masthead__menu-item--home-current + li a {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+/*
    Navigation list
    ========================================================================== */
 
