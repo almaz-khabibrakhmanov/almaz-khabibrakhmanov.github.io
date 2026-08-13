@@ -59,10 +59,11 @@ author_profile: true
     /* Wheel over the map scrolls the PAGE until the user clicks in - otherwise
        reading past the map on a laptop means fighting the zoom. */
     scrollWheelZoom: false,
-    /* On a phone one finger must scroll the page, not pan the map: that trap is
-       why the old embed was painful. Pinch-zoom and marker taps still work.
-       Change to plain `true` to allow one-finger panning again. */
-    dragging: !L.Browser.mobile
+    /* One finger pans the map on a phone. The trade-off: a swipe that starts on
+       the map no longer scrolls the page, so scrolling has to begin on the text
+       above the map or the area below it. Set this back to `!L.Browser.mobile`
+       for two-finger panning, which frees one-finger scrolling everywhere. */
+    dragging: true
   });
 
   map.on('click', function () {
@@ -83,7 +84,12 @@ author_profile: true
 
   var markers = L.markerClusterGroup({
     showCoverageOnHover: false,
-    maxClusterRadius: 80
+    maxClusterRadius: 80,
+    /* Clusters normally animate apart as you zoom. A phone drops frames partway
+       through, and if a second zoom interrupts the first the markers visibly
+       jitter between the old and new positions. Snapping straight to the final
+       spots is steadier there; the desktop keeps the animation. */
+    animate: !L.Browser.mobile
   });
 
   for (var i = 0; i < addressPoints.length; i++) {
