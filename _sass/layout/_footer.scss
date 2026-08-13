@@ -57,6 +57,35 @@
   }
 }
 
+/* ==========================================================================
+   MOBILE: footer back into normal flow
+   ==========================================================================
+   The sticky-footer trick above takes the footer out of flow (`position:
+   absolute; bottom: 0`) and compensates with a hand-tuned `body { padding-
+   bottom: 9em }` in layout/_base.scss. Since the footer can no longer push
+   anything down, that reserve is a fixed guess sized for the desktop footer,
+   and the leftover — 9em minus the real footer height — showed up as a dead
+   band under Latest News on a phone.
+
+   Below $large we drop the trick entirely: the footer is a normal block again,
+   so it sizes itself and the gap is exactly its own `margin-top`. `float: none`
+   matters — left as a float it would not contribute to the body's height.
+
+   Trade-off: on a page too short to fill the screen the footer now sits right
+   after the content instead of being pinned to the bottom of the viewport. */
+
+@media screen and (max-width: #{$large - 1}) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .page__footer {
+    position: static;
+    float: none;
+    margin-top: 1.5em;  /* the entire gap above the footer — tune here */
+  }
+}
+
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;

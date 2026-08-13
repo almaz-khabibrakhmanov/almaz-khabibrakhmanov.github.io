@@ -427,9 +427,25 @@
      the nav. Scoping to :has(.sidebar__right) fixes that at the root.)
      ---------------------------------------------------------------------- */
   body:has(.sidebar__right) {
-    padding-top: 0;               /* (1) tighter top; other pages keep the full 70px clearance */
+    /* Fallback only. The greedy-nav script measures the real masthead and writes
+       `padding-top: <height>px` inline on load/resize, which outranks anything
+       here — so this value is what you get if the JS never runs. Keep it at
+       roughly the masthead height, or the nav will cover the top of the avatar. */
+    padding-top: 3.25em;
 
-    .sidebar { margin-top: 0; }   /* drop the portrait-orientation 1em gap */
+    .sidebar {
+      margin-top: 0;              /* drop the portrait-orientation 1em gap */
+
+      /* The same script applies the masthead clearance a SECOND time here.
+         It decides via `$(".author__urls-wrapper button").is(":visible")`, using
+         the Follow button as a stand-in for "are we on mobile?" — but we hide
+         that button below (inline icon row instead of a dropdown), so the test
+         inverts and the phone takes the desktop branch. The result was a full
+         masthead height of dead space above the avatar. The style is inline, so
+         only !important can undo it; the JS lives in the prebuilt main.min.js
+         and cannot be patched without `npm run uglify`. */
+      padding-top: 0 !important;
+    }
   }
 
   #main:has(.sidebar__right) {
