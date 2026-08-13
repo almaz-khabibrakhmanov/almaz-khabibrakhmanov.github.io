@@ -1,0 +1,24 @@
+/* ==========================================================================
+   TALK MAP  (/talkmap.html)
+   ========================================================================== */
+
+/* Sized against the viewport rather than the old fixed 800x600 from the
+   generated leaflet_dist/screen.css, so it fits any screen without the iframe
+   scrollbars it used to grow. Deliberately NOT `min(70vh, 640px)`: Sass would
+   try to evaluate min() itself and choke on the mixed vh/px units. */
+.talkmap {
+  width: 100%;
+  height: 70vh;
+  max-height: 640px;
+  min-height: 320px;
+  margin-bottom: 2em;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+
+  /* Leaflet's panes and popups climb to z-index 700-800. Giving the container
+     its own stacking context keeps all of that below the fixed masthead
+     (z-index 20) instead of sliding over the nav when a popup opens near the
+     top edge. */
+  position: relative;
+  z-index: 0;
+}

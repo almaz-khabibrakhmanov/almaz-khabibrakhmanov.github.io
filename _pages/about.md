@@ -16,7 +16,4 @@ My expertise spans noncovalent interactions (especially vdW dispersion), interat
 
 I enjoy collaborating across disciplines and translating sophisticated quantum mechanics concepts into interpretable results. I also take pleasure in teaching and communicating science in clear, simple terms, gaining new insights through this process. Outside research, I am a passionate guitarist and a football player. I also enjoy running, hiking, and reading.
 
-This webpage is not merely an extension of CV --- I see it also as a personal blog, a place where I can share stories along my scientific path. For example, on the [Conferences](/talks/) page, I wrote something about every scientific meeting I attended and uploaded pictures taken there. Another cool feature is the map of my scientific traveling below.
-
-<h2>My scientific map</h2>
-<iframe src="/talkmap/map.html" height="600" width="100%" style="border:none; margin-bottom: 2em;"></iframe>
+This webpage is not merely an extension of CV --- I see it also as a personal blog, a place where I can share stories along my scientific path. For example, on the [Conferences](/talks/) page, I wrote something about every scientific meeting I attended and uploaded pictures taken there. You can also see all of it at once on the [map of my scientific traveling](/talkmap.html).
