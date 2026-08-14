@@ -8,9 +8,9 @@ date: 2021-09-22
 location: "Luxembourg"
 ---
 
-In Fall 2021, I was teaching [Computational Methods course](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Computational_Methods_AY_21_22.pdf) for M.Sc. in Physics together with Dr. Mario Galante (under the guidance of Prof. Alexandre Tkatchenko). For this course, I was preparing lectures, hands-on tutorials, homework exercises and exam projects. While being challenging at first, I enjoyed the experience of sharing my knowledge with students and diligently preparing for it. The invested effort paid back as a positive and encouraging feedback from our students at the end of the semester.
+In Fall 2021, I taught the [Computational Methods course](https://almaz-khabibrakhmanov.github.io/files/teaching/CompMethods/Computational_Methods_AY_21_22.pdf) for the M.Sc. in Physics together with Dr. Mario Galante (under the guidance of Prof. Alexandre Tkatchenko). For this course, I prepared lectures, hands-on tutorials, homework exercises and exam projects. Challenging as it was at first, I enjoyed sharing my knowledge with the students and preparing for it diligently. The invested effort paid off in positive and encouraging feedback from our students at the end of the semester.
 
-Below you can find my part of lecture slides and hands-on sessions, as well as the exam projects that we created for this course.
+Below you can find my part of the lecture slides and hands-on sessions, as well as the exam projects that we created for this course.
 
 Lessons
 ======

@@ -14,14 +14,17 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Conferences"
-    url: /talks/
-
+  # CV sits third on purpose: the greedy nav folds later items into the
+  # hamburger on narrow screens, and the CV is the page a hiring committee
+  # reaches for first. Conferences is the one we can afford to have fold.
   - title: "CV"
     url: /cv/
 
   # - title: "CV"
   #   url: /cv-json/
+
+  - title: "Conferences"
+    url: /talks/
 
   - title: "Teaching"
     url: /teaching/

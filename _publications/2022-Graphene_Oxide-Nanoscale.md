@@ -3,12 +3,12 @@ title: "Electronic Properties of Graphene Oxide: Nanoroads Towards Novel Applica
 collection: publications
 category: manuscripts
 permalink: /publication/2022-Graphene_Oxide-Nanoscale
-excerpt: 'In this paper, I performed density-functional modeling of graphene oxide (GO) patterned by pristine graphene nanoroads. First, I examined various structural and compositional GO models, formed by adsorption of epoxy- and hydroxyl-groups, and ranked them by thermodynamical stability. Next, I explored the influence of nanoroads width and orientation on the electronic properties for three GO compositions. For armchair nanoroads, I found that the band gap exhibits oscillatory decrease with increasing width, similar to fluorinated graphene. In the case of zigzag nanoroads, the emerging antiferromagnetism was observed and a controlled electric field-induced transition to a half-metallic state was demonstrated, suggesting possible applications of patterned GO in optoelectronics and spintronics.'
+excerpt: 'In this paper, I performed density-functional modeling of graphene oxide (GO) patterned by pristine graphene nanoroads. First, I examined various structural and compositional GO models, formed by the adsorption of epoxy and hydroxyl groups, and ranked them by thermodynamic stability. Next, I explored the influence of the nanoroad width and orientation on the electronic properties for three GO compositions. For armchair nanoroads, I found that the band gap exhibits an oscillatory decrease with increasing width, similar to fluorinated graphene. In the case of zigzag nanoroads, emergent antiferromagnetism was observed and a controlled electric-field-induced transition to a half-metallic state was demonstrated, suggesting possible applications of patterned GO in optoelectronics and spintronics.'
 date: 2022-01-24
 venue: 'Nanoscale'
 paperurl: 'https://doi.org/10.1039/D2NR00251E'
 pdfurl: 'https://almaz-khabibrakhmanov.github.io/files/papers/2022-Graphene_Oxide-Nanoscale.pdf'
-citation: '<b>A. I. Khabibrakhmanov</b>, P. B. Sorokin, <a href="https://doi.org/10.1039/D2NR00251E ">Electronic Properties of Graphene Oxide: Nanoroads Towards Novel Applications</a>, <i>Nanoscale</i> <b>14</b>, 4131–4144 (2022).'
+citation: '<b>A. I. Khabibrakhmanov</b>, P. B. Sorokin, <a href="https://doi.org/10.1039/D2NR00251E">Electronic Properties of Graphene Oxide: Nanoroads Towards Novel Applications</a>, <i>Nanoscale</i> <b>14</b>, 4131–4144 (2022).'
 toc_image: '2022-Graphene_Oxide-Nanoscale.png'
 supplementary: 'https://almaz-khabibrakhmanov.github.io/files/papers/2022-Graphene_Oxide-SM-Nanoscale.pdf'
 ---

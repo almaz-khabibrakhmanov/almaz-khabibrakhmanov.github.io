@@ -11,7 +11,16 @@
       "Bash(grep -rln \"^permalink: /$\" _pages)",
       "Bash(sed -n '1,12p' _pages/about.md)",
       "Bash(ls _includes/head*.html _includes/seo*.html)",
-      "Bash(sed -n '1,60p' _includes/masthead.html)"
+      "Bash(sed -n '1,60p' _includes/masthead.html)",
+      "Bash(JEKYLL_ENV=production bundle exec jekyll build --quiet)",
+      "Bash(grep -rn 'small:\\\\|medium:\\\\|large:\\\\|$small\\\\b\\\\|$medium\\\\b' _sass/_variables.scss)",
+      "Bash(grep -rn '$small\\\\s*:\\\\|$medium\\\\s*:\\\\|$large\\\\s*:' _sass)",
+      "Bash(grep -oE \"@media screen and \\\\\\(max-width: 924px\\\\\\)\\\\{.{0,1700}\" _site/assets/css/main.css)",
+      "Bash(git -C \"D:/OneDrive - University of Luxembourg/Website/almaz-khabibrakhmanov.github.io\" status --short)",
+      "Bash(git -C \"D:/OneDrive - University of Luxembourg/Website/almaz-khabibrakhmanov.github.io\" diff --stat)",
+      "PowerShell(bundle exec *)",
+      "Bash(grep -o 'masthead__menu-item--lg[^>]*>.\\\\{0,140\\\\}' _site/index.html)",
+      "Bash(grep -o 'masthead__menu-item--lg[^>]*>.\\\\{0,140\\\\}' _site/publications/index.html)"
     ]
   }
 }

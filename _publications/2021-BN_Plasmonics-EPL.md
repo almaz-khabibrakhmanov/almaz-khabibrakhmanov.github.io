@@ -3,7 +3,7 @@ title: "Extended UV Detection Bandwidth: h-BN/Al Powder Nanocomposites Photodete
 collection: publications
 category: manuscripts
 permalink: /publication/2021-BN_Plasmonics-EPL
-excerpt: 'In this study, I provided theoretical support to our experimental collaborators at NUST "MISiS", who were working on extending the UV detection bandwidth of h-BN photodetectors by mixing the material with metal nanoparticles. My contribution was computing surface plasmon resonance spectra for h-BN nanocomposite with various metals (Cu, Ag, Au, and Al). Based on my predictions, Al was chosen as the most suitable candidate, and experiments confirmed the results, revealing the cutoff wavelength of 266 nm ─ beyond the previously reported 250 nm.'
+excerpt: 'In this study, I provided theoretical support to our experimental collaborators at NUST "MISiS", who were working on extending the UV detection bandwidth of h-BN photodetectors by mixing the material with metal nanoparticles. My contribution was computing surface plasmon resonance spectra for h-BN nanocomposites with various metals (Cu, Ag, Au, and Al). Based on my predictions, Al was chosen as the most suitable candidate, and experiments confirmed the results, revealing a cutoff wavelength of 266 nm ─ beyond the 240 nm detection limit of pure h-BN.'
 date: 2021-03-22
 venue: 'EPL'
 paperurl: 'https://doi.org/10.1209/0295-5075/133/28002'

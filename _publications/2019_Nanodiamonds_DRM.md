@@ -3,7 +3,7 @@ title: "Ultrasmall Diamond Nanoparticles with Unusual Incompressibility"
 collection: publications
 category: manuscripts
 permalink: /publication/2019-Nanodiamonds-DRM
-excerpt: 'In this work, I provided theoretical support to our colleague experimentalists for their studies of nanodiamonds stiffness. This was my first scientific project: I created structural models of nanodiamonds in a given size range and computed their bulk modulus using classical interatomic potentials. The predicted trend of stiffness enhancement due to quantum confinement effects was confirmed by experimental (Raman spectroscopy) measurements, revealing the nanodiamonds bulk modulus of 607 GPa. This project laid the foundation for my following theoretical research on nanodiamonds stiffness.'
+excerpt: 'In this work, I provided theoretical support to our experimental colleagues for their studies of nanodiamond stiffness. This was my first scientific project: I created structural models of nanodiamonds in a given size range and computed their bulk modulus using classical interatomic potentials. The predicted trend of stiffness enhancement due to quantum confinement effects was confirmed by experimental (Raman spectroscopy) measurements, revealing a nanodiamond bulk modulus of 607 GPa. This project laid the foundation for my subsequent theoretical research on nanodiamond stiffness.'
 date: 2019-06-01
 venue: 'Diamond and Related Materials'
 paperurl: 'https://doi.org/10.1016/j.diamond.2019.04.033'

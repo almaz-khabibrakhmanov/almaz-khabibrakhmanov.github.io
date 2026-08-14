@@ -4,7 +4,7 @@ collection: publications
 selected: true
 category: manuscripts
 permalink: /publication/2026-MBD-ML-PRXI
-excerpt: 'Non-local many-body dispersion (MBD-NL) is one of the most accurate for describing long-range van der Waals interactions, yet its application has traditionally been limited to electronic-structure codes with native MBD-NL implementations, since it requires atomic polarizabilities and dispersion coefficients derived from the electron density. In the present work, we close this gap by introducing MBD-ML, a machine-learning model that predicts these quantities directly from atomic structure. As a result, MBD can be combined with virtually any atomistic method, including DFT, semi-empirical approaches, and machine-learning force fields, without requiring access to the underlying electron density.'
+excerpt: 'Non-local many-body dispersion (MBD-NL) is one of the most accurate methods for describing long-range van der Waals interactions, yet its application has traditionally been limited to electronic-structure codes with native MBD-NL implementations, since it requires atomic polarizabilities and dispersion coefficients derived from the electron density. In the present work, we close this gap by introducing MBD-ML, a machine-learning model that predicts these quantities directly from atomic structure. As a result, MBD can be combined with virtually any atomistic method, including DFT, semi-empirical approaches, and machine-learning force fields, without requiring access to the underlying electron density.'
 date: 2026-07-28
 venue: 'PRX Intelligence'
 paperurl: 'https://doi.org/10.1103/pv86-l9h7'

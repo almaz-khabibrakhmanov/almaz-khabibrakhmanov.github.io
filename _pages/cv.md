@@ -15,7 +15,7 @@ title_button:
 
 Professional Experience
 ------
-* March 2025 -- present: <b>Postdoctoral Scholar</b>
+* March 2025 -- present: <b>Postdoctoral Researcher</b>
   * University of Luxembourg, [TCP group](https://tcpunilu.com/)
   * Advisor: [Prof. Dr. Alexandre Tkatchenko](https://scholar.google.com/citations?user=o2t1Pv8AAAAJ&hl=en&oi=ao)
  
@@ -49,8 +49,8 @@ Skills & Software Experience
 * Density Functional Theory: [FHI-aims](https://fhi-aims.org/), [VASP](https://vasp.at/), [SIESTA](https://siesta-project.org/siesta/)
 * Quantum Chemistry: [PySCF](https://pyscf.org/), [Q-Chem](https://www.q-chem.com/), [ORCA](https://www.faccts.de/orca/), [MRCC](https://www.mrcc.hu/)
 * Molecular Dynamics: [LAMMPS](https://www.lammps.org/)
-* Visualization & Analysis: [OVITO](https://www.ovito.org/), [VESTA](https://jp-minerals.org/vesta/en/), [Chimera X](https://www.cgl.ucsf.edu/chimerax/), [JMol](https://jmol.sourceforge.net/)
-* Coding: Python, Fortran, bash, MatLab, C++
+* Visualization & Analysis: [OVITO](https://www.ovito.org/), [VESTA](https://jp-minerals.org/vesta/en/), [ChimeraX](https://www.cgl.ucsf.edu/chimerax/), [Jmol](https://jmol.sourceforge.net/)
+* Coding: Python, Fortran, Bash, MATLAB, C++
 * High-Performance Computing: MPI/OpenMP, Slurm
 * Code Development & Modifications: [libMBD](https://github.com/libmbd/libmbd), FHI-aims, LAMMPS
 
@@ -90,9 +90,10 @@ Awards
     </dialog>
   </li>
   <li><i>Summa cum Laude</i> graduation from B.Sc. (2018) and M.Sc. (2020)</li>
-  <li>Letter of acknowledgement for achievements in study and in student life, Russian Ministry of Science and Higher Education (2020)</li>
+  <li>Letter of acknowledgement for achievements in research, Russian Ministry of Science and Higher Education (2020)</li>
   <li>Increased Academic Scholarship for excellence in study (2017 &ndash; 2020)</li>
   <li>Alexander Abramov's Fund Scholarship for excellence in study (2015 &ndash; 2017)</li>
+  <li>Prize winner of regional Olympiads in physics and chemistry (2012 &ndash; 2014)</li>
 </ul>
 
 Teaching & Service

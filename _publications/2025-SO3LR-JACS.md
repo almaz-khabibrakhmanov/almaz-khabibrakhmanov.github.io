@@ -6,7 +6,7 @@ category: manuscripts
 permalink: /publication/2025-SO3LR-JACS
 excerpt: 'This work introduces the SO3LR method that integrates the fast and stable SO3krates neural network for semilocal interactions with universal pairwise force fields designed for short-range repulsion, long-range electrostatics, and dispersion interactions. My contribution was designing and implementing these long-range modules based on my prior work on the universal vdW-QDO potentials. SO3LR is trained on a diverse PBE0+MBD dataset of 4 million neutral and charged molecular complexes, ensuring broad coverage of covalent and noncovalent interactions. SO3LR is applied to study units of four major biomolecule types, polypeptide folding, and nanosecond dynamics of larger systems such as a protein, a glycoprotein, and a lipid bilayer, all in explicit solvent, demonstrating reasonable to high accuracy.'
 date: 2025-08-31
-venue: 'The Journal of the American Chemical Society'
+venue: 'Journal of the American Chemical Society'
 paperurl: 'https://doi.org/10.1021/jacs.5c09558'
 pdfurl: 'http://almaz-khabibrakhmanov.github.io/files/papers/2025-SO3LR-JACS.pdf'
 citation: 'A. Kabylda, J. T. Frank, S. Suárez-Dou, <b>A. Khabibrakhmanov</b>, L. M. Sandonas, O. T. Unke, S. Chmiela, K.-R.&nbsp;Müller, A. Tkatchenko, <a href="https://doi.org/10.1021/jacs.5c09558">Molecular Simulations with a Pretrained Neural Network and Universal Pairwise Force Fields</a>, <i>J.&nbsp;Am. Chem. Soc.</i> <b>147</b>(37), 33723–33734 (2025).'

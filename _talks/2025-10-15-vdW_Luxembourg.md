@@ -14,7 +14,7 @@ photos:
     - file: 'with_kathy.jpg'
       caption: 'With Prof. Katharine Hunt (Michigan State University). I was accompanying and assisting her during the conference'
     - file: 'feynman.jpg'
-      caption: 'In her talk, she showed a cool rare image of Richard Feynman'
+      caption: 'In her talk, she showed a cool, rare image of Richard Feynman'
     - file: 'matteo_talk.jpg'
       caption: 'Matteo giving a talk on our JACS work in his trademark Italian style'
 ---

@@ -2,14 +2,14 @@
 title: "1. Quantum Drude oscillators: a minimal model of electronic response"
 collection: research
 order: 1
-summary: "How far can three numbers — a frequency, a mass and a charge — go in describing how atoms respond to each other?"
+summary: "How far can three numbers {ω, μ, q} go in describing atoms' response to each other?"
 figures:
   - file: '1_qdo_jpcl.png'
     alt: 'Schematic of two coupled quantum Drude oscillators: a positive pseudo-nucleus harmonically bound to a negative Drude particle, two such atoms separated by a distance R and coupled through the Coulomb interaction'
-    caption: 'Two coupled quantum Drude oscillators. Correlated displacements of the Drude particles give the dispersion attraction.'
+    caption: 'Two coupled QDOs and the model parameters. Correlated displacements of the drudons give the dispersion interaction.'
   - file: '1_binding_curves.png'
     alt: 'vdW binding curves from the QDO potential'
-    caption: 'Optional caption under that one'
+    caption: 'vdW binding curves obtained from the QDO model accurately recover the coupled-cluster reference.'
 ongoing: >-
   I am currently pushing the model into territory it was never built for:
   **covalent bonding**. At this stage it is a proof of concept, and its 
@@ -26,10 +26,9 @@ key_papers:
 ---
 
 Most of my work rests on one idea: an atom's valence electron cloud can be
-represented as a quantum harmonic oscillator — a quantum Drude oscillator (QDO)
-— defined by just a frequency, a mass and a charge. The win is that
-response and interaction properties then follow analytically, without an
-electronic-structure calculation.
+represented as a quantum Drude oscillator (QDO), defined by just a frequency $$\omega$$, 
+a mass $$\mu$$ and a charge $$q$$. The win is that response and interaction properties 
+then follow analytically, without an electronic-structure calculation.
 
 Two results make the model practical. In the **optimized QDO (OQDO)**
 parametrization, all three parameters are fixed from only the static dipole

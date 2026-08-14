@@ -1,21 +1,21 @@
 ---
-title: "2. Mutual connection of dispersion and the electron density"
+title: "2. The fundamental link between dispersion and the electron density"
 collection: research
 order: 2
-summary: "Dispersion is usually bolted onto a calculation as a scalar energy correction. It is not scalar — it reshapes the electron density itself."
+summary: "Dispersion is widely regarded as an additive energy correction. However, in large systems it is not that simple — dispersion reshapes the electron density itself."
 figures:
   - file: '2_mbd_esp.jpg'
-    alt: 'vdW binding curves from the QDO potential'
-    caption: 'Optional caption under that one'
+    alt: 'Dispersion-induced electrostatic potential map'
+    caption: 'Map of the dispersion-induced electrostatic potential for the buckyball catcher (in kcal/mol).'
   - file: '2_mbd_en_dens_DNA.jpg'
-    alt: 'Schematic of two coupled quantum Drude oscillators: a positive pseudo-nucleus harmonically bound to a negative Drude particle, two such atoms separated by a distance R and coupled through the Coulomb interaction'
-    caption: 'Two coupled quantum Drude oscillators. Correlated displacements of the Drude particles give the dispersion attraction.'
+    alt: ''
+    caption: 'The MBD energy density plotted in real space for the DNA-ellipticine complex.'
 ongoing: >-
-  A reduced-density-matrix formulation of the many-body dispersion (MBD) model,
-  which recasts the dispersion energy as a **scalar field in real space** rather
-  than a single number. The practical prize would be genuine spatial
-  visualization of noncovalent interactions — seeing *where* dispersion energy
-  sits.
+  I am also developing a reduced-density-matrix formulation of the many-body 
+  dispersion (MBD) model, which recasts the dispersion energy as a 
+  **scalar energy density field** rather than a single number. If it works, 
+  dispersion stops being one number per system and becomes something you can 
+  look at in space, seeing *where* the dispersion energy sits.
 key_papers:
   - label: "JACS 2025"
     url: "https://doi.org/10.1021/jacs.5c13706"
@@ -25,16 +25,22 @@ key_papers:
 
 Density-functional approximations are usually judged on energies, and long-range
 dispersion is added afterwards as a correction that leaves the density untouched.
-I asked what that assumption costs.
+That is reasonable for small molecules, but not necessarily for large,
+polarizable systems — exactly the question I studied.
 
 Across more than 30 molecular and supramolecular systems, benchmarked against
 carefully converged CCSD−HF reference density differences, dispersion turns out
 to **polarize electron densities substantially**, shifting long-range
 electrostatic potentials by up to 4 kcal/mol. That is a non-trivial coupling
 between dispersion and electrostatics — two contributions that are routinely
-treated as separable — and it has consequences for any density-derived quantity:
-electrostatic potentials, density-based indicators, embedding schemes.
+treated as separable. This has consequences for any density-derived quantity,
+from electrostatic potentials to density-based bonding indicators.
 
-Establishing the effect required building reproducible protocols for
-high-level reference densities, which I curated and published as an open dataset
-rather than leaving on a cluster.
+There is also an uncomfortable implication for the functionals themselves. In
+the systems where polarization matters most, an exchange–correlation
+approximation evaluates the energy at a slightly wrong density, and how much
+that costs in supramolecular complexes and proteins is what I would eventually
+like to find out. The hard part is disentangling the two contributions:
+semilocal functionals already capture some dispersion at intermediate range, by
+an amount that is difficult to pin down, and that overlap is normally hidden
+inside an empirically fitted damping function.

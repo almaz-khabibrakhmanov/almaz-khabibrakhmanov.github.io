@@ -4,7 +4,7 @@ collection: publications
 selected: true
 category: manuscripts
 permalink: /publication/2025-QDO_Review-JCP
-excerpt: 'In this community-building review, we aimed to collect and synthesize the knowledge about modeling noncovalent interactions using quantum Drude oscillator (QDO) models, which has emerged from the intensive research efforts over the pasr decades. The review focuses on theoretical underpinnings of the QDO model and explains the physical foundations for its soaring success in describing polarization response and vdW interactions across a broad range of atomistic systems. The theoretical frameworks considered range from perturbation theory and many-body dispersion approaches to quantum Monte Carlo and path-integral techniques. I led the writing process by contributing sections, coordinating co-authors and serving as the primary editor of the manuscript.'
+excerpt: 'In this community-building review, we aimed to collect and synthesize the knowledge about modeling noncovalent interactions using quantum Drude oscillator (QDO) models that has emerged from intensive research efforts over the past decades. The review focuses on the theoretical underpinnings of the QDO model and explains the physical foundations for its soaring success in describing polarization response and vdW interactions across a broad range of atomistic systems. The theoretical frameworks considered range from perturbation theory and many-body dispersion approaches to quantum Monte Carlo and path-integral techniques. I led the writing process by contributing sections, coordinating co-authors and serving as the primary editor of the manuscript.'
 date: 2025-10-15
 venue: 'The Journal of Chemical Physics'
 paperurl: 'https://doi.org/10.1063/5.0281913'

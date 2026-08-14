@@ -1,7 +1,7 @@
 ---
 title: "<q>The van der Waals – London Discussions</q> (2023)"
 collection: talks
-selected: true
+selected: false
 category: talks
 type: "Contributed talk"
 permalink: /talks/2023-10-27-Strasbourg
@@ -17,9 +17,9 @@ photos:
     - file: 'strasbourg2023/iconic_view.jpg'
       caption: 'Iconic facades of Strasbourg'
     - file: 'strasbourg2023/dom.jpg'
-      caption: 'Notre Dame de Strasbourg is truly impressive'
+      caption: 'Notre-Dame de Strasbourg is truly impressive'
     - file: 'strasbourg2023/nice_street.jpg'
-      caption: 'I liked cute streets of the city'
+      caption: 'I liked the cute streets of the city'
     - file: 'strasbourg2023/park.jpg'
       caption: 'Parks are also pretty nice'
     - file: 'strasbourg2023/europarliament.jpg'
