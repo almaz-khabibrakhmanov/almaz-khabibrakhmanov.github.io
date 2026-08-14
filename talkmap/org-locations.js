@@ -70,7 +70,7 @@ var addressPoints = [
     42.4692875
   ],
   [
-    "Seminar at Prof. Maurer Group (2026)",
+    "Seminar in Prof. Maurer's group (2026)",
     48.2131278,
     16.3606855
   ],
@@ -78,6 +78,11 @@ var addressPoints = [
     "DTU Active Summer School (2024)",
     42.13436,
     8.59422
+  ],
+  [
+    "vdW/London Discussions 2026",
+    43.1070321,
+    12.4029962
   ],
   [
     "ESTML Conference 2023",
@@ -95,7 +100,7 @@ var addressPoints = [
     -87.6244212
   ],
   [
-    "Seminar at Galli and Gagliardi Groups 2024",
+    "Seminar in the Galli and Gagliardi groups (2024)",
     41.7881243,
     -87.6047744
   ],
@@ -111,7 +116,7 @@ var addressPoints = [
   ],
   [
     "APS March Meeting 2022",
-    41.8500481,
-    -87.615947
+    41.851689,
+    -87.6164754
   ]
 ];
