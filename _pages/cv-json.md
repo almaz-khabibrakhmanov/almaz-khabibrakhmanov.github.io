@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv-json/
 author_profile: false
+sitemap: false # duplicate of /cv/; kept working but hidden from search engines
 redirect_from:
   - /resume-json
 ---

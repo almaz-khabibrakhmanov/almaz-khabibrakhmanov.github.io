@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Almaz Khabibrakhmanov"
 title_separator          : "-"
 name                     : &name "Almaz Khabibrakhmanov"
-description              : &description "Postdoctoral Researcher, University of Luxembourg | Bridging Quantum Mechanics with (Bio)Molecular Simulations"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Postdoctoral Researcher, University of Luxembourg — Bridging Quantum Mechanics with Atomistic Simulations"   # Shown as the meta description in search results. Avoid the "|" character: kramdown parses it as a table cell and strips it, so the two halves run together.
 url                      : https://almaz-khabibrakhmanov.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "site_avatar.jpg"
   name             : "Dr. Almaz Khabibrakhmanov"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoctoral researcher bridging quantum mechanics with (bio)molecular simulations"
+  bio              : "Postdoctoral researcher bridging quantum mechanics with atomistic simulations"
   location         : "Luxembourg"
   employer         : "University of Luxembourg"
   uri              : # URL
@@ -158,9 +158,17 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Person" # Person or Organization (defaults to Person)
+  name                   : "Almaz Khabibrakhmanov" # If the user or organization name differs from the site's name
+  # These populate the "sameAs" array of the Person JSON-LD block in
+  # _includes/seo.html, which is how search engines link this site to the same
+  # person on other services. The whole block is skipped if "social" is empty.
+  links:
+    - "https://scholar.google.com/citations?user=ApFXAn0AAAAJ"
+    - "https://orcid.org/0000-0003-3148-8064"
+    - "https://github.com/almaz-khabibrakhmanov"
+    - "https://www.linkedin.com/in/almaz-khabibrakhmanov"
+    - "https://www.researchgate.net/profile/Almaz-Khabibrakhmanov"
 
 
 # Analytics
@@ -196,6 +204,7 @@ exclude:
   - LICENSE
   - local
   - log
+  - markdown_generator # upstream academicpages helper scripts; unused (see scripts/)
   - node_modules
   - package.json*
   - Rakefile

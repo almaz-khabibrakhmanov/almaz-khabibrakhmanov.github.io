@@ -20,7 +20,14 @@
       "Bash(git -C \"D:/OneDrive - University of Luxembourg/Website/almaz-khabibrakhmanov.github.io\" diff --stat)",
       "PowerShell(bundle exec *)",
       "Bash(grep -o 'masthead__menu-item--lg[^>]*>.\\\\{0,140\\\\}' _site/index.html)",
-      "Bash(grep -o 'masthead__menu-item--lg[^>]*>.\\\\{0,140\\\\}' _site/publications/index.html)"
+      "Bash(grep -o 'masthead__menu-item--lg[^>]*>.\\\\{0,140\\\\}' _site/publications/index.html)",
+      "Bash(curl -sI https://almaz-khabibrakhmanov.github.io/)",
+      "Bash(curl -s -o /dev/null -w \"robots.txt: %{http_code}\\\\n\" https://almaz-khabibrakhmanov.github.io/robots.txt)",
+      "Bash(curl -s https://almaz-khabibrakhmanov.github.io/robots.txt)",
+      "Bash(curl -s https://almaz-khabibrakhmanov.github.io/)",
+      "Bash(curl -s https://scholar.google.com/robots.txt)",
+      "Bash(curl -s https://orcid.org/robots.txt)",
+      "Bash(curl -s https://almaz-khabibrakhmanov.github.io/sitemap.xml)"
     ]
   }
 }
