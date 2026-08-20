@@ -7,10 +7,17 @@
 {% endif %}
 
 <div class="list__item">
-  <article class="archive__item archive__item--talk" itemscope itemtype="http://schema.org/Event">
+  {% comment %}
+    CreativeWork, not schema.org/Event (the upstream academicpages markup).
+    An Event needs startDate and location to be valid, and Search Console
+    reports every entry here as a broken event without them. Event markup is
+    meant for the organiser of an event, not for someone listing meetings they
+    attended, so there is nothing to gain by filling those fields in instead.
+  {% endcomment %}
+  <article class="archive__item archive__item--talk" itemscope itemtype="http://schema.org/CreativeWork">
 
     <div class="archive__item-body">
-      <h2 class="archive__item-title" itemprop="name">
+      <h2 class="archive__item-title" itemprop="headline">
         {% if include.item_number %}<span class="pub-number">{{ include.item_number }}.</span>{% endif -%}
         {%- if post.conference_url %}<a href="{{ post.conference_url }}" target="_blank" rel="noopener">{{ title }}</a>{%- else %}{{ title }}{%- endif %}
       </h2>

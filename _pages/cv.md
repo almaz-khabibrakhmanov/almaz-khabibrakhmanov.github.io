@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "CV"
-seo_title: "Almaz Khabibrakhmanov"
+description: "Curriculum vitae of Almaz Khabibrakhmanov, postdoctoral researcher in theoretical chemical physics at the University of Luxembourg."
 permalink: /cv/
 author_profile: true
 redirect_from:

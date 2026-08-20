@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Privet and welcome to my personal webpage!"
-seo_title: "Almaz Khabibrakhmanov"
+seo_title: "Almaz Khabibrakhmanov" # The home page alone owns the bare name as its <title>. Every other page must NOT set seo_title: the theme then builds "Research - Almaz Khabibrakhmanov" etc. from title + title_separator, so the pages stop competing with each other for the same search query.
 author_profile: true
 redirect_from: 
   - /about/
