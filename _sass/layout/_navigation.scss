@@ -473,7 +473,10 @@
     text-decoration-line: none !important;
 
     &:hover {
-      color: #000;
+      // Was hardcoded #000, which sat at 2.93:1 on the hover fill and failed
+      // WCAG AA. The readable colour differs per theme, so it comes from a
+      // variable now (see _sass/theme/_default_light.scss).
+      color: var(--global-link-color-hover-text);
       background: var(--global-link-color-hover);
     }
   }

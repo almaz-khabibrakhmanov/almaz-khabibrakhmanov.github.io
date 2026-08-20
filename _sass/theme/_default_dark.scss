@@ -12,9 +12,12 @@ $background                 : #474747;
 $background-light           : mix(#fff, $background, 80%);
 $background-lighter         : mix(#fff, $background, 90%);
 $text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+/* Accent: sapphire, lifted for the dark theme. The #474747 ground is a fairly
+   light charcoal, so a saturated blue cannot reach 4.5:1 against it -- these
+   are deliberately lighter than their light-theme counterparts. */
+$link                       : #93b6f6;  /* 4.54:1 on #474747 */
+$link-dark                  : #bcd1f9;  /* 6.03:1 on #474747 -- lighter, not darker */
+$link-light                 : #a3b5db;  /* 4.51:1 on #474747 */
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -46,6 +49,9 @@ html[data-theme="dark"] {
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};
+    /* Inverted with respect to the light theme: here the hover fill is the
+       lighter colour, so the text on top of it has to be black. */
+    --global-link-color-hover-text      : #000000;  /* 13.63:1 on the hover fill */
     --global-masthead-link-color        : #{$text};
     --global-masthead-link-color-hover  : #{$background-light};
     --global-text-color                 : #{$text};
