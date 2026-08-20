@@ -15,14 +15,27 @@
   }
 
   a {
-    text-decoration: underline;
+    /*
+      No underline at rest -- links are carried by the accent colour alone, and
+      the underline comes back on hover and focus.
 
-    &:hover {
+      Worth knowing what this trades away: WCAG technique G183 allows colour as
+      the only resting cue when the link text and the body text differ by at
+      least 3:1 in contrast. Petrol #0e7490 against the body #494e52 is
+      1.57:1, so the two differ mostly in hue rather than in brightness.
+      So for a reader with deuteranopia or protanopia, or on a poor screen in
+      sunlight, inline links are hard to pick out of a paragraph until they
+      hover. Re-adding a faint underline (see the commit message) restores it.
+    */
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
       text-decoration: underline;
+    }
 
-      img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
-      }
+    &:hover img {
+      box-shadow: 0 0 10px rgba(#000, 0.25);
     }
   }
 }
@@ -121,9 +134,17 @@
     box-shadow: 0 0 10px rgba(#000, 0.25);
   }
 
-  .archive__item-title {
-    text-decoration: underline;
-  }
+  /*
+    The title used to be underlined here, on hover of the whole item. Two
+    things were wrong with that. It fired when the pointer was anywhere in the
+    item -- including the PDF and SM buttons, which have nothing to do with the
+    title link. And because the rule sat on the <h2> rather than on the <a>
+    inside it, the line was painted in the heading colour, so a black underline
+    appeared under a coloured link.
+
+    The title link is inside .archive, so `.archive a:hover` already underlines
+    it in the accent colour when it is actually the thing being hovered.
+  */
 }
 
 

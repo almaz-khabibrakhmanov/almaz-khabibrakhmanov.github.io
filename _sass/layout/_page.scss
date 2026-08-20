@@ -90,14 +90,27 @@
   }
 
   a {
-    text-decoration: underline;
+    /*
+      No underline at rest -- links are carried by the accent colour alone, and
+      the underline comes back on hover and focus.
 
-    &:hover {
+      Worth knowing what this trades away: WCAG technique G183 allows colour as
+      the only resting cue when the link text and the body text differ by at
+      least 3:1 in contrast. Petrol #0e7490 against the body #494e52 is
+      1.57:1, so the two differ mostly in hue rather than in brightness.
+      So for a reader with deuteranopia or protanopia, or on a poor screen in
+      sunlight, inline links are hard to pick out of a paragraph until they
+      hover. Re-adding a faint underline (see the commit message) restores it.
+    */
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
       text-decoration: underline;
+    }
 
-      img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
-      }
+    &:hover img {
+      box-shadow: 0 0 10px rgba(#000, 0.25);
     }
   }
 

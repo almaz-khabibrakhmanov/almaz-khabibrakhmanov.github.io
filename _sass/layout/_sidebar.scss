@@ -270,23 +270,38 @@
   .latest-news {
     width: 100%;                     // always fill the sidebar container
     background: var(--global-bg-color);
-    border: 1px solid var(--global-border-color);
     border-radius: $border-radius;
     padding: 0.75rem 1rem;
     font-size: $type-size-6;
     line-height: 1.5;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+    /*
+      Deliberately frameless. The panel used to carry
+        border: 1px solid var(--global-border-color)
+      plus a soft box-shadow, which looked like nothing in the light theme
+      (--global-border-color is #f1f2f3 there, on a white page) but drew a hard
+      light-grey rectangle in the dark theme, where the same variable is
+      #bcc0c3 against a #474747 ground. The shadow had the mirror-image
+      problem: rgba(0,0,0,.08) is invisible over dark. Rather than theme two
+      more values, the panel simply has no frame in either theme.
+    */
     max-height: 80vh;                // don’t overflow the screen
     overflow-y: auto;
     box-sizing: border-box;
   }
 
-  .latest-news h3 {
+  /*
+    h2, not h3: the markup in _includes/latest-news.html is <h2>, so this rule
+    used to match nothing at all. That is where the gap above the heading came
+    from -- `margin-top: 0` never landed, and the heading kept the 1.5em top
+    margin every h2 gets from _sass/layout/_base.scss.
+
+    The rule also carried font-size, font-family, border-bottom and
+    padding-bottom, which had likewise never applied to anything. They are
+    dropped rather than switched on, so fixing the selector changes only the
+    spacing and nothing else about how the panel looks.
+  */
+  .latest-news h2 {
     margin-top: 0;
-    font-size: $type-size-5;
-    font-family: $sans-serif-narrow;
-    border-bottom: 1px solid var(--global-border-color);
-    padding-bottom: 0.25rem;
   }
 
   .latest-news ul {

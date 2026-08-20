@@ -36,17 +36,17 @@ $sidebar-screen-min-width   : 1024px;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    /* Accent: deep sapphire. Every value below clears WCAG AA (4.5:1) against
-       the white background, most of them AAA; the stock #52adc8 managed only
-       2.57:1. */
-    --global-link-color                 : #1e40af;  /* 8.72:1 on #fff */
-    --global-link-color-hover           : #16308a;  /* 11.51:1 on #fff */
-    --global-link-color-visited         : #4a63b8;  /* 5.57:1 on #fff */
+    /* Accent: deep petrol teal -- the stock #52adc8 hue, pushed darker and
+       less washed out. Every value below clears WCAG AA (4.5:1) against the
+       white background; the stock colour managed only 2.57:1. */
+    --global-link-color                 : #0e7490;  /* 5.36:1 on #fff */
+    --global-link-color-hover           : #0a5468;  /* 8.46:1 on #fff */
+    --global-link-color-visited         : #378092;  /* 4.50:1 on #fff */
     /* Text drawn ON TOP of --global-link-color-hover used as a fill (the
        overflow-nav dropdown). The hover colour is darker than the page in the
        light theme and lighter than it in the dark theme, so the readable text
        colour flips between themes and cannot be hardcoded. */
-    --global-link-color-hover-text      : #ffffff;  /* 11.51:1 on the hover fill */
+    --global-link-color-hover-text      : #ffffff;  /* 8.46:1 on the hover fill */
     --global-masthead-link-color        : #{$dark-gray};
     --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
     --global-text-color                 : #{$dark-gray};
