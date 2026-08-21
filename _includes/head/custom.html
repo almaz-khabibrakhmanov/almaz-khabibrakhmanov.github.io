@@ -5,13 +5,26 @@
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- Personal favicon (diamond — "Almaz") -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
+<!--
+  Personal favicon (diamond — "Almaz").
+
+  Order matters: Google takes the first usable rel="icon" it finds, and it wants
+  a SQUARE image of 48x48 or a multiple of it. So the 96x96 PNG leads.
+
+  images/favicon.svg is deliberately NOT linked. Despite the extension it is not
+  a drawing -- it is a single base64 PNG in an SVG wrapper, 710x610, with no
+  viewBox. Being non-square it fails Google's rule, and being a raster it gives
+  browsers nothing the PNGs do not. It used to sit first in this list.
+
+  There is also a copy of favicon.ico at the site root. Google and several other
+  crawlers probe /favicon.ico directly and ignore the markup; that URL used to
+  return 404.
+-->
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-96x96.png" sizes="96x96"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="icon" href="{{ base_path }}/favicon.ico" sizes="48x48"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
 <!-- end custom head snippets -->
