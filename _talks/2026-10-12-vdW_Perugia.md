@@ -15,7 +15,7 @@ photos:
     - file: 'perugia2026/talk.jpg'
       caption: 'Giving my talk on dispersion densities' 
     - file: 'perugia2026/after_talk.jpg'
-      caption: 'Post-talk recovery mode --- with the badge proudly on display :)'
+      caption: 'Post-talk recovery mode – with the badge proudly on display :)'
     - file: 'perugia2026/group_photo.jpg'
       caption: 'A group photo of the conference'
     - file: 'perugia2026/dinner.jpg'
@@ -23,7 +23,7 @@ photos:
     - file: 'perugia2026/square.jpg'
       caption: 'Perugia is a beuatiful historical place. This is the central square (Piazza IV Novembre)'
     - file: 'perugia2026/steep_slope.jpg'
-      caption: 'I thought Luxembourg was a hilly city --- but Perugia is really hilly!'
+      caption: 'I thought Luxembourg was a hilly city – but Perugia is really hilly!'
     - file: 'perugia2026/narrow_street.jpg'
       caption: "It's pretty enjoyable to walk up these cozy narrow streets"
     - file: 'perugia2026/paysage.jpg'
